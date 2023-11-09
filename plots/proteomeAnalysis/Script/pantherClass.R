@@ -226,14 +226,18 @@ names(all) <- c("UCLASS_TERM","CLASS_TERM","n.pe","n.dm","n.both","n.combined")
 
 make_a_treemap <- function(df,label = "", N = NULL) {
   df$m <- rowSums(df[,3:5])
-  pdf(paste0("Output/Plots/",label,"Treemap.pdf"), width = 13.5, height = 9)
+  pdf(paste0("Output/Plots/",label,"Treemap.pdf"), width = 13.5, height = 7)
   treemap(df,
           index = c("UCLASS_TERM","CLASS_TERM"),
           vSize = N,
           type = "index",
+          fontcolor.labels=c("#000000","#222222"),
+          fontsize.labels = c(16,12),
+          fontface.labels = c(2,1),
+          bg.labels = c("transparent"),
           align.labels=list(
             c("left", "top"), 
-            c("center", "center")
+            c("right", "bottom")
           ),
           overlap.labels = 0.5,
           title="",
@@ -251,9 +255,9 @@ make_a_treemap(all, "combined2", N = "n.combined")
 combined_df <- read.csv("Output/Data/combinedpanther.csv")
 combined_df <- combined_df[order(combined_df$"UCLASS_TERM"),]
 nrow(combined_df[combined_df$UCLASS_TERM == "Unclassified",])
-# output PDF after downsizing by 50%:
-# Uncategorized category is 48.519 x 58.907 mm
-# so unit are per protein is in mm2
-(48.519 * 58.907) / 92
-# draw a box to represent 1 protein should be one side of
-sqrt((48.519 * 58.907) / 92 * 1)
+# # output PDF after downsizing by 50%:
+# # Uncategorized category is 48.519 x 58.907 mm
+# # so unit are per protein is in mm2
+# (48.519 * 58.907) / 92
+# # draw a box to represent 1 protein should be one side of
+# sqrt((48.519 * 58.907) / 92 * 1)
