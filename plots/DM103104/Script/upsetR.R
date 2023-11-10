@@ -116,6 +116,11 @@ write.table(combine_df, "Output/Data/combined_proteome.txt", sep = "\t", row.nam
 # now format for nice output
 combine_df <- cbind(1:nrow(combine_df),combine_df)
 names(combine_df) <- c("Rank","Gene name","Protein name","Protein ID","Fold change","P value","Dataset")
+# Intersection is things like DM|PE we want WT + INV
+combine_df$Dataset <- gsub("|"," + ",combine_df$Dataset, fixed = TRUE)
+combine_df$Dataset <- gsub("DM","WT",combine_df$Dataset)
+combine_df$Dataset <- gsub("RE","R159E",combine_df$Dataset)
+combine_df$Dataset <- gsub("PE","INV",combine_df$Dataset)
 # we now have combine_df as our final output for presentation as a Table
 write.csv(format(combine_df, digits = 2),"Output/Data/combined_proteome.csv", row.names = FALSE)
 
