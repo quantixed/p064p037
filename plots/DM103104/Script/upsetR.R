@@ -108,15 +108,16 @@ combine_df <- combine_df[order(combine_df$so_ratioWave, decreasing = TRUE), ]
 # place in desired order
 keep <- c("protein","so_NAME","so_PID","so_ratioWave","so_allTWave","int")
 combine_df <- combine_df[, keep]
+rownames(combine_df) <- 1:nrow(combine_df)
 names(combine_df) <- c("so_SHORTNAME","so_NAME","so_PID","so_ratioWave","so_allTWave","int")
 # save this first
 write.table(combine_df, "Output/Data/combined_proteome.txt", sep = "\t", row.names = FALSE)
-rownames(combine_df) <- 1:nrow(combine_df)
 
-# now format for nice ouput
-names(combine_df) <- c("Gene_name","Protein_name","Protein_ID","Fold_change","P_value","Intersection")
-# we now have combine_df as our final output
-write.csv(combine_df,"Output/Data/combined_proteome.csv")
+# now format for nice output
+combine_df <- cbind(1:nrow(combine_df),combine_df)
+names(combine_df) <- c("Rank","Gene name","Protein name","Protein ID","Fold change","P value","Dataset")
+# we now have combine_df as our final output for presentation as a Table
+write.csv(format(combine_df, digits = 2),"Output/Data/combined_proteome.csv", row.names = FALSE)
 
 # we require the background for comparisons - we do not take RE dataset because it is not background for complete_df
 dm_df <- read.delim("Data/rankTable_WTvsControl.txt")
@@ -138,6 +139,7 @@ rownames(universe_df) <- 1:nrow(universe_df)
 # save this first
 write.table(universe_df, "Output/Data/universe_proteome.txt", sep = "\t", row.names = FALSE)
 
-names(universe_df) <- c("Gene_name","Protein_name","Protein_ID","Fold_change","P_value")
-# we now have combine_df as our final output
-write.csv(universe_df,"Output/Data/universe_proteome.csv")
+# we do not need this as a Table for presentation
+# universe_df <- cbind(1:nrow(universe_df),universe_df)
+# names(universe_df) <- c("Rank","Gene name","Protein name","Protein ID","Fold change","P value","Dataset")
+# write.csv(format(universe_df, digits = 2),"Output/Data/universe_proteome.csv", row.names = FALSE)
