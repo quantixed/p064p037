@@ -10,6 +10,7 @@
 ### Supplementary Figures
 
 - Comparison of WT, R159E, control `DM103104/Script/DM103104.R`
+- Comparison of INV proteome with SLMV and ATG9 proteomes, Euler plots and replot of Judith et al. data to highlight INV proteins `ProteomicsComparison`
 
 ### Tables
 
