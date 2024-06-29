@@ -273,7 +273,17 @@ make_a_treemap(all, "combined2", N = "n.combined")
 
 # load the combined panther data frame back in
 combined_df <- read.csv("Output/Data/combinedpanther.csv")
-combined_df <- combined_df[order(combined_df$"UCLASS_TERM"), ]
+combined_df <- combined_df[order(
+  combined_df$UCLASS_TERM, combined_df$CLASS_TERM), ]
+# keep so_SHORTNAME, so_NAME, so_PID, UCLASS_TERM and CLASS_TERM
+combined_df <- combined_df[, c("so_SHORTNAME",
+                               "so_NAME", "so_PID",
+                               "UCLASS_TERM", "CLASS_TERM")]
+# change names to "Gene name", "Protein Name", "UniProt ID", "Class", "Subclass"
+names(combined_df) <- c("Protein",
+                        "Protein name", "Protein ID", "Class", "Subclass")
+# save this output
+write.csv(combined_df, "Output/Data/combinedpanther_sort.csv")
 nrow(combined_df[combined_df$UCLASS_TERM == "Unclassified", ])
 # # output PDF after downsizing by 50%:
 # # Uncategorized category is 48.519 x 58.907 mm
