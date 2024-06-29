@@ -60,10 +60,10 @@
 "ARG1"	"Arginase-1"	"P05089"	3.95354132925102	0.00029559256
 "TM9SF2"	"Transmembrane 9 superfamily member 2"	"Q99805"	3.4899844272774	0.00026148398
 "EIF4E"	"Eukaryotic translation initiation factor 4E"	"P06730"	4.7062986011412	0.00075351313
-"SERINC1"	"Serine incorporator 1"	"Q9NRX5"	5.9493940068842	0.0017800898
+"SERINC1"	"Serine incorporator 1"	"Q9NRX5"	5.94939400688421	0.0017800898
 "GALNT2"	"Polypeptide N-acetylgalactosaminyltransferase 2"	"Q10471"	5.51420309069469	0.0015063224
 "MTAP"	"S-methyl-5-thioadenosine phosphorylase"	"Q13126"	4.4696337171708	0.0013930283
-"VAMP8"	"Vesicle-associated membrane protein 8"	"Q9BV40"	9.4509102444921	0.01716313
+"VAMP8"	"Vesicle-associated membrane protein 8"	"Q9BV40"	9.45091024449211	0.01716313
 "RAB5A"	"Ras-related protein Rab-5A"	"P20339"	5.0227877182627	0.0049398118
 "TPBG"	"Trophoblast glycoprotein"	"Q13641"	4.50510941366813	0.0034548161
 "TSPAN6"	"Tetraspanin-6"	"O43657"	4.42049650716906	0.0049347747
@@ -84,7 +84,7 @@
 "IGF2R"	"Cation-independent mannose-6-phosphate receptor"	"P11717"	2.53643708625689	0.0046448167
 "RCC2"	"Protein RCC2"	"Q9P258"	4.18635502769802	0.025369329
 "PRMT1"	"Protein arginine N-methyltransferase 1"	"Q99873"	3.52530753008359	0.015182214
-"RAB34"	"Ras-related protein Rab-34"	"Q9BZG1"	2.768931916222	0.0070680832
+"RAB34"	"Ras-related protein Rab-34"	"Q9BZG1"	2.76893191622199	0.0070680832
 "TPM4"	"Tropomyosin alpha-4 chain"	"P67936"	4.63537542875544	0.042617559
 "RPL10A"	"60S ribosomal protein L10a"	"P62906"	2.96531436225156	0.015854798
 "RPLP2"	"60S acidic ribosomal protein P2"	"P05387"	3.15132725952372	0.022467759
@@ -97,7 +97,7 @@
 "PSME3"	"Proteasome activator complex subunit 3"	"P61289"	2.13411423427723	0.010045497
 "SRP68"	"Signal recognition particle subunit SRP68"	"Q9UHB9"	3.10746960657975	0.039769039
 "MAT2A"	"S-adenosylmethionine synthase isoform type-2"	"P31153"	2.78692369380073	0.028917095
-"MYADM"	"Myeloid-associated differentiation marker"	"Q96S97"	2.2899510640055	0.015716966
+"MYADM"	"Myeloid-associated differentiation marker"	"Q96S97"	2.28995106400549	0.015716966
 "PEF1"	"Peflin"	"Q9UBV8"	3.12105470686037	0.046577547
 "ACACA"	"Acetyl-CoA carboxylase 1"	"Q13085"	2.34917309613385	0.019161124
 "FASN"	"Fatty acid synthase"	"P49327"	2.12981591507696	0.016578915
@@ -137,7 +137,7 @@
 "PDHB"	"Pyruvate dehydrogenase E1 component subunit beta, mitochondrial"	"P11177"	0.469840769822648	0.023952462
 "CLN3"	"Battenin"	"Q13286"	0.477535800247044	0.023359172
 "HNRNPL"	"Heterogeneous nuclear ribonucleoprotein L"	"P14866"	0.428990849896698	0.035196759
-"GNB1"	"Guanine nucleotide-binding protein G(I)/G(S)/G(T) subunit beta-1"	"P62873"	0.44589727486081	0.0313613
+"GNB1"	"Guanine nucleotide-binding protein G(I)/G(S)/G(T) subunit beta-1"	"P62873"	0.445897274860809	0.0313613
 "SUCLG1"	"Succinyl-CoA ligase [ADP/GDP-forming] subunit alpha, mitochondrial"	"P53597"	0.447444638982527	0.036065917
 "HLA-C"	"HLA class I histocompatibility antigen, Cw-7 alpha chain"	"P10321"	0.418302118810112	0.045387145
 "ITGB4"	"Integrin beta-4"	"P16144"	0.48620845684078	0.029376354
@@ -229,7 +229,7 @@
 "SERPINH1"	"Serpin H1"	"P50454"	2.08831907807232	0.405682
 "UBA52"	"Ubiquitin-60S ribosomal protein L40"	"P62987"	1.89780457926076	0.00077005313
 "LASP1"	"LIM and SH3 domain protein 1"	"Q14847"	0.513418282390041	0.0017142773
-"SNRPD1"	"Small nuclear ribonucleoprotein Sm D1"	"P62314"	0.59274813777083	0.0010838181
+"SNRPD1"	"Small nuclear ribonucleoprotein Sm D1"	"P62314"	0.592748137770829	0.0010838181
 "PAPSS1"	"Bifunctional 3-phosphoadenosine 5-phosphosulfate synthase 1"	"O43252"	1.96225823564313	0.0018647453
 "ATP1B1"	"Sodium/potassium-transporting ATPase subunit beta-1"	"P05026"	0.205795844356824	0.05162289
 "PODXL"	"Podocalyxin"	"O00592"	0.191675726126732	0.10817023
@@ -246,7 +246,7 @@
 "LRMP"	"Lymphoid-restricted membrane protein"	"Q12912"	0.698073897789223	0.0047228155
 "ACAP1"	"Arf-GAP with coiled-coil, ANK repeat and PH domain-containing protein 1"	"Q15027"	0.578063365665369	0.0088841757
 "EMC7"	"ER membrane protein complex subunit 7"	"Q9NPA0"	0.311051033233326	0.072915398
-"ENG"	"Endoglin"	"P17813"	0.24669195121434	0.16977111
+"ENG"	"Endoglin"	"P17813"	0.246691951214341	0.16977111
 "ALG1"	"Chitobiosyldiphosphodolichol beta-mannosyltransferase"	"Q9BT22"	0.358589349477329	0.050632287
 "MTDH"	"Protein LYRIC"	"Q86UE4"	0.273373981133414	0.13546765
 "SNRPN"	"Small nuclear ribonucleoprotein-associated protein N"	"P63162"	0.564299731999062	0.012237514
@@ -272,7 +272,7 @@
 "MRPS22"	"28S ribosomal protein S22, mitochondrial"	"P82650"	0.583080375947766	0.020654276
 "TSPO"	"Translocator protein"	"P30536"	0.61801658717702	0.017806172
 "PRDX2"	"Peroxiredoxin-2"	"P32119"	0.505252915847381	0.03548057
-"DAD1"	"Dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit DAD1"	"P61803"	1.9399395779151	0.03350459
+"DAD1"	"Dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit DAD1"	"P61803"	1.93993957791509	0.03350459
 "MRPS27"	"28S ribosomal protein S27, mitochondrial"	"Q92552"	0.588784230933193	0.021587608
 "RMDN3"	"Regulator of microtubule dynamics protein 3"	"Q96TC7"	0.580274077726837	0.02272369
 "LMNB2"	"Lamin-B2"	"Q03252"	0.440741281240004	0.059119802
@@ -293,7 +293,7 @@
 "ATAD3A"	"ATPase family AAA domain-containing protein 3A"	"Q9NVI7"	0.357543788364036	0.14794001
 "CLPP"	"ATP-dependent Clp protease proteolytic subunit, mitochondrial"	"Q16740"	0.484349914424566	0.054415554
 "EIF3I"	"Eukaryotic translation initiation factor 3 subunit I"	"Q13347"	0.50688355617057	0.047027167
-"TMA16"	"Translation machinery-associated protein 16"	"Q96EY4"	1.9397169742844	0.045649119
+"TMA16"	"Translation machinery-associated protein 16"	"Q96EY4"	1.93971697428439	0.045649119
 "TRAP1"	"Heat shock protein 75 kDa, mitochondrial"	"Q12931"	0.298942543178231	0.28594601
 "ERAL1"	"GTPase Era, mitochondrial"	"O75616"	0.634711634357676	0.023629509
 "ILF3"	"Interleukin enhancer-binding factor 3"	"Q12906"	0.482043683494407	0.058949497
@@ -359,7 +359,7 @@
 "NDUFB5"	"NADH dehydrogenase [ubiquinone] 1 beta subcomplex subunit 5, mitochondrial"	"O43674"	1.81355264759128	0.067278072
 "SSR4"	"Translocon-associated protein subunit delta"	"P51571"	0.399795459303548	0.20129342
 "TRMT112"	"Multifunctional methyltransferase subunit TRM112-like protein"	"Q9UI30"	0.511665725882248	0.089961417
-"CAPN1"	"Calpain-1 catalytic subunit"	"P07384"	1.9751457006942	0.094176531
+"CAPN1"	"Calpain-1 catalytic subunit"	"P07384"	1.97514570069421	0.094176531
 "BCS1L"	"Mitochondrial chaperone BCS1"	"Q9Y276"	0.635794701834696	0.044562191
 "DLG5"	"Disks large homolog 5"	"Q8TDM6"	1.69459176530179	0.057267606
 "RPL34"	"60S ribosomal protein L34"	"P49207"	0.497744100466512	0.10214964
@@ -490,7 +490,7 @@
 "PTER"	"Phosphotriesterase-related protein"	"Q96BW5"	0.514983449310375	0.21532431
 "NUP93"	"Nuclear pore complex protein Nup93"	"Q8N1F7"	0.56066000414807	0.16297747
 "NUMA1"	"Nuclear mitotic apparatus protein 1"	"Q14980"	0.582606218491244	0.14464018
-"BTF3"	"Transcription factor BTF3"	"P20290"	0.56157702697578	0.16372542
+"BTF3"	"Transcription factor BTF3"	"P20290"	0.561577026975779	0.16372542
 "SLC25A4"	"ADP/ATP translocase 3"	"P12236"	0.626958363677	0.11720198
 "STX10"	"Syntaxin-10"	"O60499"	1.60795254504207	0.12113094
 "DNAJC11"	"DnaJ homolog subfamily C member 11"	"Q9NVH1"	0.613504452613843	0.12698115
@@ -568,7 +568,7 @@
 "TRMT1"	"tRNA (guanine(26)-N(2))-dimethyltransferase"	"Q9NXH9"	0.546356451995243	0.2595582
 "CDKN2D"	"Cyclin-dependent kinase 4 inhibitor D"	"P55273"	1.47794926215173	0.12768242
 "METTL2A"	"Methyltransferase-like protein 2A"	"Q96IZ6"	0.540874199052195	0.26867378
-"HSPA14"	"Heat shock 70 kDa protein 14"	"Q0VDF9"	1.6554241401339	0.18775243
+"HSPA14"	"Heat shock 70 kDa protein 14"	"Q0VDF9"	1.65542414013389	0.18775243
 "ATP2B1"	"Plasma membrane calcium-transporting ATPase 1"	"P20020"	0.677796546398101	0.12818325
 "CSK"	"Tyrosine-protein kinase CSK"	"P41240"	0.641995600320571	0.15391226
 "APOO"	"Apolipoprotein O"	"Q9BUR5"	1.23966722330539	0.072176933
@@ -611,7 +611,7 @@
 "SMOC1"	"SPARC-related modular calcium-binding protein 1"	"Q9H4F8"	0.7467766668907	0.1049692
 "GABPA"	"GA-binding protein alpha chain"	"Q06546"	0.722686820771423	0.11719008
 "DNTTIP2"	"Deoxynucleotidyltransferase terminal-interacting protein 2"	"Q5QJE6"	0.576199791458573	0.2487493
-"NCKAP1"	"Nck-associated protein 1"	"Q9Y2A7"	0.68463163819035	0.14034025
+"NCKAP1"	"Nck-associated protein 1"	"Q9Y2A7"	0.684631638190351	0.14034025
 "UFL1"	"E3 UFM1-protein ligase 1"	"O94874"	0.606121328564916	0.21033596
 "DSG2"	"Desmoglein-2"	"Q14126"	0.575792242094724	0.24972898
 "PSMC1"	"26S protease regulatory subunit 4"	"P62191"	1.57780460723798	0.18223605
@@ -730,13 +730,13 @@
 "LEMD2"	"LEM domain-containing protein 2"	"Q8NC56"	0.745024129245011	0.16121592
 "PLXNB2"	"Plexin-B2"	"O15031"	0.611591248311097	0.3129569
 "SMAD9"	"Mothers against decapentaplegic homolog 9"	"O15198"	1.82177349854177	0.44853735
-"RHOG"	"Rho-related GTP-binding protein RhoG"	"P84095"	0.73057159485933	0.17396517
+"RHOG"	"Rho-related GTP-binding protein RhoG"	"P84095"	0.730571594859331	0.17396517
 "CAP1"	"Adenylyl cyclase-associated protein 1"	"Q01518"	0.657578460054266	0.2468091
 "EIF2AK2"	"Interferon-induced, double-stranded RNA-activated protein kinase"	"P19525"	0.70128073768269	0.19946148
 "SLC25A11"	"Mitochondrial 2-oxoglutarate/malate carrier protein"	"Q02978"	0.621579396664584	0.29887837
 "ATP1A1"	"Sodium/potassium-transporting ATPase subunit alpha-1"	"P05023"	0.572083090261873	0.39424041
 "SCD"	"Acyl-CoA desaturase"	"O00767"	0.602824698474553	0.33172056
-"SUCLG2"	"Succinyl-CoA ligase [GDP-forming] subunit beta, mitochondrial"	"Q96I99"	1.4854678128395	0.23079616
+"SUCLG2"	"Succinyl-CoA ligase [GDP-forming] subunit beta, mitochondrial"	"Q96I99"	1.48546781283949	0.23079616
 "SSB"	"Lupus La protein"	"P05455"	1.42897491422611	0.20431395
 "GGCT"	"Gamma-glutamylcyclotransferase"	"O75223"	1.47379102273862	0.22646455
 "RTN4"	"Reticulon-4"	"Q9NQC3"	0.565622482085389	0.41709721
@@ -786,14 +786,14 @@
 "UQCRH"	"Cytochrome b-c1 complex subunit 6, mitochondrial"	"P07919"	0.744377687691323	0.1873844
 "ACTR2"	"Actin-related protein 2"	"P61160"	1.66690214970105	0.38430455
 "C19orf43"	"Uncharacterized protein C19orf43"	"Q9BQ61"	0.658686336175861	0.28181636
-"MARCKSL1"	"MARCKS-related protein"	"P49006"	0.60219858746226	0.37992731
+"MARCKSL1"	"MARCKS-related protein"	"P49006"	0.602198587462261	0.37992731
 "TMEM126A"	"Transmembrane protein 126A"	"Q9H061"	0.679699449528053	0.2541301
 "MRPL53"	"39S ribosomal protein L53, mitochondrial"	"Q96EL3"	1.51182764407964	0.28013927
 "FAHD1"	"Acylpyruvase FAHD1, mitochondrial"	"Q6P587"	1.58842544829444	0.33024925
 "HSPE1"	"10 kDa heat shock protein, mitochondrial"	"P61604"	0.761574161735343	0.17556511
 "TCEB2"	"Transcription elongation factor B polypeptide 2"	"Q15370"	0.741707355419202	0.19231282
 "ARF1"	"ADP-ribosylation factor 1"	"P84077"	0.547963145908881	0.5264504
-"PCCB"	"Propionyl-CoA carboxylase beta chain, mitochondrial"	"P05166"	1.497223035351	0.27338138
+"PCCB"	"Propionyl-CoA carboxylase beta chain, mitochondrial"	"P05166"	1.49722303535099	0.27338138
 "SRPR"	"Signal recognition particle receptor subunit alpha"	"P08240"	0.553993934728856	0.51048231
 "SDHAF2"	"Succinate dehydrogenase assembly factor 2, mitochondrial"	"Q9NX18"	0.702601214559336	0.23196462
 "CTPS1"	"CTP synthase 1"	"P17812"	1.58101481772207	0.3292073
@@ -1072,12 +1072,12 @@
 "PTGFRN"	"Prostaglandin F2 receptor negative regulator"	"Q9P2B2"	1.33373305429199	0.38325566
 "MTX1"	"Metaxin-1"	"Q13505"	1.28319523993753	0.33726585
 "FKBP2"	"Peptidyl-prolyl cis-trans isomerase FKBP2"	"P26885"	0.805492799934856	0.30232003
-"PSMD11"	"26S proteasome non-ATPase regulatory subunit 11"	"O00231"	1.4049338125423	0.45748258
+"PSMD11"	"26S proteasome non-ATPase regulatory subunit 11"	"O00231"	1.40493381254229	0.45748258
 "PGS1"	"CDP-diacylglycerol--glycerol-3-phosphate 3-phosphatidyltransferase, mitochondrial"	"Q32NB8"	0.758989030103109	0.36982745
 "RPS27L"	"40S ribosomal protein S27-like"	"Q71UM5"	0.766396455578745	0.3583129
 "CSRP1"	"Cysteine and glycine-rich protein 1"	"P21291"	0.674820899573086	0.54914439
 "ANTXR1"	"Anthrax toxin receptor 1"	"Q9H6X2"	0.796665257848632	0.31707954
-"TXNDC12"	"Thioredoxin domain-containing protein 12"	"O95881"	1.323444138205	0.3799462
+"TXNDC12"	"Thioredoxin domain-containing protein 12"	"O95881"	1.32344413820501	0.3799462
 "SLFN12L"	"Schlafen family member 12-like"	"Q6IEE8"	0.786459681661364	0.33502525
 "HNRNPA1"	"Heterogeneous nuclear ribonucleoprotein A1, N-terminally processed"	"Q32P51"	0.677252850740999	0.55130321
 "IPO5"	"Importin-5"	"O00410"	1.38652171047729	0.44760218
@@ -1122,7 +1122,7 @@
 "DNAH2"	"Dynein heavy chain 2, axonemal"	"Q9P225"	1.3188452492899	0.41534486
 "SHMT2"	"Serine hydroxymethyltransferase, mitochondrial"	"P34897"	0.679363590274576	0.59911853
 "SEC62"	"Translocation protein SEC62"	"Q99442"	0.771874521241152	0.3922222
-"RFC2"	"Replication factor C subunit 2"	"P35250"	0.78090768099295	0.37781402
+"RFC2"	"Replication factor C subunit 2"	"P35250"	0.780907680992949	0.37781402
 "MRPL18"	"39S ribosomal protein L18, mitochondrial"	"Q9H0U6"	1.3479321525956	0.44872075
 "DMBT1"	"Deleted in malignant brain tumors 1 protein"	"Q9UGM3"	0.780837672384575	0.37882173
 "ZCCHC16"	"Zinc finger CCHC domain-containing protein 16"	"Q6ZR62"	0.835668595158495	0.3026028
@@ -1280,7 +1280,7 @@
 "ACTL6A"	"Actin-like protein 6A"	"O96019"	1.28145858699031	0.53142405
 "CALD1"	"Caldesmon"	"Q05682"	0.886115093611793	0.34868371
 "EPHX1"	"Epoxide hydrolase 1"	"P07099"	0.720604279428736	0.69331104
-"CTNNA1;CTNNA2"	"Catenin alpha-2"	"P26232"	1.0946069507498	0.31679422
+"CTNNA1;CTNNA2"	"Catenin alpha-2"	"P26232"	1.09460695074981	0.31679422
 "SEL1L"	"Protein sel-1 homolog 1"	"Q9UBV2"	0.826291515351397	0.44260734
 "RRM1"	"Ribonucleoside-diphosphate reductase large subunit"	"P23921"	0.782010719820798	0.53520155
 "MTHFD2"	"Bifunctional methylenetetrahydrofolate dehydrogenase/cyclohydrolase, mitochondrial"	"P13995"	1.14094694046444	0.36754423
@@ -1344,7 +1344,7 @@
 "NDUFA10"	"NADH dehydrogenase [ubiquinone] 1 alpha subcomplex subunit 10, mitochondrial"	"O95299"	1.12090895169797	0.39532024
 "PRMT5"	"Protein arginine N-methyltransferase 5"	"O14744"	1.28604108541102	0.6249733
 "PTRH2"	"Peptidyl-tRNA hydrolase 2, mitochondrial"	"Q9Y3E5"	1.20691188133867	0.50645524
-"DEGS1"	"Sphingolipid delta(4)-desaturase DES1"	"O15121"	0.82727991387643	0.5095349
+"DEGS1"	"Sphingolipid delta(4)-desaturase DES1"	"O15121"	0.827279913876431	0.5095349
 "EEF2"	"Elongation factor 2"	"P13639"	0.887901367587569	0.40320286
 "COL4A1"	"Collagen alpha-1(IV) chain"	"P02462"	0.860313711243056	0.44821486
 "ELAVL2"	"ELAV-like protein 2"	"Q12926"	0.831723601429751	0.50157762
@@ -1538,10 +1538,10 @@
 "RAB2B"	"Ras-related protein Rab-2B"	"Q8WUD1"	0.864148557381458	0.64410949
 "UTP15"	"U3 small nucleolar RNA-associated protein 15 homolog"	"Q8TED0"	1.13328270603145	0.60280734
 "SLC38A5"	"Sodium-coupled neutral amino acid transporter 5"	"Q8WUX1"	0.851582894722527	0.67969042
-"PLOD1"	"Procollagen-lysine,2-oxoglutarate 5-dioxygenase 1"	"Q02809"	0.81344207843093	0.79441512
+"PLOD1"	"Procollagen-lysine,2-oxoglutarate 5-dioxygenase 1"	"Q02809"	0.813442078430931	0.79441512
 "JAGN1"	"Protein jagunal homolog 1"	"Q8N5M9"	0.888531100843048	0.59469849
 "CISD2"	"CDGSH iron-sulfur domain-containing protein 2"	"Q8N5K1"	0.864425258948049	0.65221041
-"PFN1"	"Profilin-1"	"P07737"	0.82049197722829	0.77582014
+"PFN1"	"Profilin-1"	"P07737"	0.820491977228289	0.77582014
 "SRPRB"	"Signal recognition particle receptor subunit beta"	"Q9Y5M8"	0.800790436646945	0.84477389
 "MRPL46"	"39S ribosomal protein L46, mitochondrial"	"Q9H2W6"	1.16120979951122	0.66428113
 "CD276"	"CD276 antigen"	"Q5ZPR3"	1.14376306027178	0.63192666
@@ -1561,7 +1561,7 @@
 "EIF3C"	"Eukaryotic translation initiation factor 3 subunit C"	"Q99613"	1.10117819218491	0.57265478
 "VDAC1"	"Voltage-dependent anion-selective channel protein 1"	"P21796"	0.841235294868195	0.74184495
 "KIF2C"	"Kinesin-like protein KIF2C"	"Q99661"	1.12600368797791	0.61962646
-"DHX15"	"Pre-mRNA-splicing factor ATP-dependent RNA helicase DHX15"	"O43143"	0.904208408958	0.5853585
+"DHX15"	"Pre-mRNA-splicing factor ATP-dependent RNA helicase DHX15"	"O43143"	0.904208408957999	0.5853585
 "RRP8"	"Ribosomal RNA-processing protein 8"	"O43159"	0.888715753191327	0.6205045
 "RRP7A"	"Ribosomal RNA-processing protein 7 homolog A"	"Q9Y3A4"	0.897919111082799	0.59991348
 "KPNA4"	"Importin subunit alpha-3"	"O00629"	0.855549739611659	0.70566297
@@ -1605,7 +1605,7 @@
 "PEX14"	"Peroxisomal membrane protein PEX14"	"O75381"	1.15080971858245	0.72919339
 "NUP205"	"Nuclear pore complex protein Nup205"	"Q92621"	1.1174707332296	0.6627664
 "LGALS7"	"Galectin-7"	"P47929"	0.864129449409595	0.74473357
-"PSME2"	"Proteasome activator complex subunit 2"	"Q9UL46"	1.1678305276143	0.769575
+"PSME2"	"Proteasome activator complex subunit 2"	"Q9UL46"	1.16783052761431	0.769575
 "SERPINI1"	"Neuroserpin"	"Q99574"	1.05961319581139	0.55779934
 "MOCOS"	"Molybdenum cofactor sulfurase"	"Q96EN8"	0.88357141915286	0.69795203
 "NIFK"	"MKI67 FHA domain-interacting nucleolar phosphoprotein"	"Q9BYG3"	0.890878093257078	0.67967463
@@ -1628,7 +1628,7 @@
 "ACOX1"	"Peroxisomal acyl-coenzyme A oxidase 1"	"Q15067"	0.857752796318177	0.79464668
 "NIPSNAP1"	"Protein NipSnap homolog 1"	"Q9BPW8"	0.900334215376649	0.67791337
 "RPS15"	"40S ribosomal protein S15"	"P62841"	0.833864102398874	0.87522054
-"NUBP2"	"Cytosolic Fe-S cluster assembly factor NUBP2"	"Q9Y5Y2"	0.905242769833722	0.6663205
+"NUBP2"	"Cytosolic Fe-S cluster assembly factor NUBP2"	"Q9Y5Y2"	0.905242769833723	0.6663205
 "MRPS2"	"28S ribosomal protein S2, mitochondrial"	"Q9Y399"	0.896950094010056	0.68729973
 "PRKCSH"	"Glucosidase 2 subunit beta"	"P14314"	1.18603663670419	0.84775233
 "SPCS3"	"Signal peptidase complex subunit 3"	"P61009"	0.897158638994992	0.69388831
@@ -1706,7 +1706,7 @@
 "UFSP2"	"Ufm1-specific protease 2"	"Q9NUQ7"	1.10954298424476	0.75316387
 "ABCF1"	"ATP-binding cassette sub-family F member 1"	"Q8NE71"	0.908480969207229	0.73394579
 "SLC25A6"	"ADP/ATP translocase 2"	"P12236;P12235;P05141"	0.871075534917546	0.84415597
-"APOOL"	"MICOS complex subunit MIC27"	"Q6UXV4"	0.8972740534133	0.76861292
+"APOOL"	"MICOS complex subunit MIC27"	"Q6UXV4"	0.897274053413299	0.76861292
 "PTCD3"	"Pentatricopeptide repeat domain-containing protein 3, mitochondrial"	"Q96EY7"	0.902647048112782	0.75510585
 "HIST1H1E"	"Histone H1.4"	"P10412"	0.892335932192993	0.78596997
 "MAK16"	"Protein MAK16 homolog"	"Q9BXY0"	1.08974755521051	0.71644485
@@ -1743,7 +1743,7 @@
 "MPG"	"DNA-3-methyladenine glycosylase"	"P29372"	1.11287337588492	0.80835873
 "APOD"	"Apolipoprotein D"	"P05090"	0.916843293865712	0.75774807
 "HEXA"	"Beta-hexosaminidase subunit alpha"	"P06865"	1.1024821744737	0.78629231
-"RRP12"	"RRP12-like protein"	"Q5JTH9"	0.916856269327072	0.75922638
+"RRP12"	"RRP12-like protein"	"Q5JTH9"	0.916856269327073	0.75922638
 "SAMM50"	"Sorting and assembly machinery component 50 homolog"	"Q9Y512"	1.0907048688964	0.76013362
 "CTNNA1"	"Catenin alpha-1;Catenin alpha-2"	"P35221;P26232"	1.06206956717146	0.69597888
 "PIGT"	"GPI transamidase component PIG-T"	"Q969N2"	0.904202285941148	0.79776138
@@ -1755,12 +1755,12 @@
 "EZR"	"Ezrin"	"P15311"	0.921537130578028	0.75690669
 "RPGRIP1L"	"Protein fantom"	"Q68CZ1"	0.920046993188255	0.76249933
 "GLUL"	"Glutamine synthetase"	"P15104"	1.09138175961862	0.77326632
-"GFM2"	"Ribosome-releasing factor 2, mitochondrial"	"Q969S9"	0.903750251407326	0.8098557
+"GFM2"	"Ribosome-releasing factor 2, mitochondrial"	"Q969S9"	0.903750251407325	0.8098557
 "YIF1B"	"Protein YIF1B"	"Q5BJH7"	1.08753001418744	0.76509434
 "VPS45"	"Vacuolar protein sorting-associated protein 45"	"Q9NRW7"	0.90092866487943	0.81881744
 "MRPL40"	"39S ribosomal protein L40, mitochondrial"	"Q9NQ50"	1.04527965081539	0.67088211
 "TFB1M"	"Dimethyladenosine transferase 1, mitochondrial"	"Q8WVM0"	1.08701193545351	0.7643652
-"CCDC86"	"Coiled-coil domain-containing protein 86"	"Q9H6F5"	0.915920907407314	0.77615494
+"CCDC86"	"Coiled-coil domain-containing protein 86"	"Q9H6F5"	0.915920907407313	0.77615494
 "NQO1"	"NAD(P)H dehydrogenase [quinone] 1"	"P15559"	0.917753638982051	0.77478868
 "SFXN1"	"Sideroflexin-1"	"Q9H9B4"	1.09079002738542	0.77867609
 "TUBB"	"Tubulin beta chain"	"P07437"	1.07816481718479	0.74924928
@@ -1785,7 +1785,7 @@
 "SMAD2"	"Mothers against decapentaplegic homolog 2"	"Q15796"	0.915179924654979	0.80228955
 "LMAN1"	"Protein ERGIC-53"	"P49257"	0.893936690230594	0.86754501
 "HK1"	"Hexokinase-1"	"P19367"	1.05049530490552	0.70419222
-"SERPINB4"	"Serpin B4"	"P48594"	0.92628309331429	0.77119011
+"SERPINB4"	"Serpin B4"	"P48594"	0.926283093314289	0.77119011
 "ARHGAP29"	"Rho GTPase-activating protein 29"	"Q52LW3"	1.07797507652941	0.76849788
 "MYL6B"	"Myosin light chain 6B"	"P14649"	1.14201865369393	0.93286496
 "GFM1"	"Elongation factor G, mitochondrial"	"Q96RP9"	0.90829626808651	0.82630461
@@ -1870,7 +1870,7 @@
 "FUS"	"RNA-binding protein FUS"	"P35637"	0.912192316704166	0.92537647
 "PSMA5"	"Proteasome subunit alpha type-5"	"P28066"	0.953485768012738	0.79950559
 "PSMB5"	"Proteasome subunit beta type-5"	"P28074"	1.07739562360242	0.88083786
-"LRRFIP2"	"Leucine-rich repeat flightless-interacting protein 2"	"Q9Y608"	0.95368567474073	0.80780822
+"LRRFIP2"	"Leucine-rich repeat flightless-interacting protein 2"	"Q9Y608"	0.953685674740731	0.80780822
 "TUFM"	"Elongation factor Tu, mitochondrial"	"P49411"	0.924825372896545	0.89761573
 "ABCF2"	"ATP-binding cassette sub-family F member 2"	"Q9UG63"	0.944517930048613	0.83702499
 "MECR"	"Trans-2-enoyl-CoA reductase, mitochondrial"	"Q9BV79"	1.06326271965678	0.85006762
@@ -1931,7 +1931,7 @@
 "UQCRB"	"Cytochrome b-c1 complex subunit 7"	"P14927"	1.04627452560262	0.88787454
 "PPP1R11"	"Protein phosphatase 1 regulatory subunit 11"	"O60927"	0.949155090066382	0.90938222
 "WDR5"	"WD repeat-containing protein 5"	"P61964"	1.04835390478478	0.8983134
-"PPIB"	"Peptidyl-prolyl cis-trans isomerase B"	"P23284"	0.93895587340587	0.94859999
+"PPIB"	"Peptidyl-prolyl cis-trans isomerase B"	"P23284"	0.938955873405871	0.94859999
 "ZW10"	"Centromere/kinetochore protein zw10 homolog"	"O43264"	0.969711786486647	0.85310876
 "TPM2"	"Tropomyosin beta chain"	"P07951"	1.03943672817251	0.88202524
 "MPHOSPH10"	"U3 small nucleolar ribonucleoprotein protein MPP10"	"O00566"	1.03514086098438	0.87270039
@@ -1963,11 +1963,11 @@
 "FLII"	"Protein flightless-1 homolog"	"Q13045"	1.03166800184242	0.90196937
 "KBTBD4"	"Kelch repeat and BTB domain-containing protein 4"	"Q9NVX7"	0.960726246473241	0.92985636
 "PSMA1"	"Proteasome subunit alpha type-1"	"P25786"	0.959169663065853	0.94036651
-"ITGA2"	"Integrin alpha-2"	"P17301"	1.0365830040753	0.9248932
+"ITGA2"	"Integrin alpha-2"	"P17301"	1.03658300407531	0.9248932
 "PGAM5"	"Serine/threonine-protein phosphatase PGAM5, mitochondrial"	"Q96HS1"	0.966683026344074	0.9193368
 "GRPEL1"	"GrpE protein homolog 1, mitochondrial"	"Q9HAV7"	0.974250951677842	0.89822888
 "SQRDL"	"Sulfide:quinone oxidoreductase, mitochondrial"	"Q9Y6N5"	0.975676983822519	0.89401484
-"SEC23A"	"Protein transport protein Sec23A"	"Q15436"	1.0345589194634	0.92440116
+"SEC23A"	"Protein transport protein Sec23A"	"Q15436"	1.03455891946341	0.92440116
 "LIMA1"	"LIM domain and actin-binding protein 1"	"Q9UHB6"	1.03298295119392	0.92348307
 "CXCR4"	"C-X-C chemokine receptor type 4"	"P61073"	1.03521640635621	0.93298274
 "CREG1"	"Protein CREG1"	"O75629"	1.032478210191	0.92505366
@@ -1976,7 +1976,7 @@
 "ACOT9"	"Acyl-coenzyme A thioesterase 9, mitochondrial"	"Q9Y305"	0.975001206348401	0.91162133
 "PSMD2"	"26S proteasome non-ATPase regulatory subunit 2"	"Q13200"	0.963581095819555	0.95036489
 "ALKBH4"	"Alpha-ketoglutarate-dependent dioxygenase alkB homolog 4"	"Q9NXW9"	0.96378534183304	0.94975543
-"SH3GLB1"	"Endophilin-B1"	"Q9Y371"	1.0239504545115	0.91155899
+"SH3GLB1"	"Endophilin-B1"	"Q9Y371"	1.02395045451151	0.91155899
 "NME2"	"Nucleoside diphosphate kinase B"	"P22392"	1.03649040196971	0.94955742
 "HPDL"	"4-hydroxyphenylpyruvate dioxygenase-like protein"	"Q96IR7"	1.03077554055966	0.93370092
 "KRT18"	"Keratin, type I cytoskeletal 18"	"P05783"	0.972294716959182	0.92710876
@@ -1989,7 +1989,7 @@
 "KIF5C"	"Kinesin heavy chain isoform 5C"	"O60282"	1.03136678880223	0.94602042
 "LONP1"	"Lon protease homolog, mitochondrial"	"P36776"	0.978395122563434	0.91881293
 "WDR12"	"Ribosome biogenesis protein WDR12"	"Q9GZL7"	0.96891542223341	0.94910741
-"ARF5"	"ADP-ribosylation factor 5"	"P84085"	0.975486755813004	0.92875141
+"ARF5"	"ADP-ribosylation factor 5"	"P84085"	0.975486755813003	0.92875141
 "GANAB"	"Neutral alpha-glucosidase AB"	"Q14697"	0.962452343508294	0.97289979
 "SPTBN1"	"Spectrin beta chain, non-erythrocytic 1"	"Q01082"	1.03358733980683	0.96058697
 "CD99"	"CD99 antigen"	"P14209"	1.01616760198888	0.90847814
@@ -2001,7 +2001,7 @@
 "GPRC5A"	"Retinoic acid-induced protein 3"	"Q8NFJ5"	0.972160922096087	0.94921225
 "DIABLO"	"Diablo homolog, mitochondrial"	"Q9NR28"	1.01944188875284	0.92416245
 "LRPAP1"	"Alpha-2-macroglobulin receptor-associated protein"	"P30533"	1.02105574030521	0.93028468
-"FADS1"	"Fatty acid desaturase 1"	"O60427"	0.97963229119743	0.93315983
+"FADS1"	"Fatty acid desaturase 1"	"O60427"	0.979632291197429	0.93315983
 "SNW1"	"SNW domain-containing protein 1"	"Q13573"	1.02170934322899	0.93716329
 "BZW2"	"Basic leucine zipper and W2 domain-containing protein 2"	"Q9Y6E2"	1.02297547141512	0.94130421
 "GDI1"	"Rab GDP dissociation inhibitor alpha"	"P31150"	1.02398752856629	0.9446404
@@ -2046,7 +2046,7 @@
 "PDCD6"	"Programmed cell death protein 6"	"O75340"	0.985179382510805	0.96823055
 "WDR1"	"WD repeat-containing protein 1"	"O75083"	0.990929044040407	0.9523266
 "FKBP10"	"Peptidyl-prolyl cis-trans isomerase FKBP10"	"Q96AY3"	1.01905412777621	0.98433399
-"SDF4"	"45 kDa calcium-binding protein"	"Q9BRK5"	0.987431008218638	0.96431118
+"SDF4"	"45 kDa calcium-binding protein"	"Q9BRK5"	0.987431008218637	0.96431118
 "CTSZ"	"Cathepsin Z"	"Q9UBR2"	0.986901928205766	0.96840382
 "ALDH9A1"	"4-trimethylaminobutyraldehyde dehydrogenase"	"P49189"	1.01247122340712	0.96645612
 "PPA1"	"Inorganic pyrophosphatase"	"Q15181"	1.0141463836152	0.97216576
@@ -2078,17 +2078,17 @@
 "CAST"	"Calpastatin"	"P20810"	0.989985536464404	0.98405993
 "CYB5R3"	"NADH-cytochrome b5 reductase 3"	"P00387"	0.988000543865293	0.99226171
 "ACTA1"	"Actin, alpha skeletal muscle"	"P68133"	0.990461240551071	0.98493016
-"LMAN2"	"Vesicular integral-membrane protein VIP36"	"Q12907"	0.98990490820417	0.98745233
+"LMAN2"	"Vesicular integral-membrane protein VIP36"	"Q12907"	0.989904908204171	0.98745233
 "YWHAG"	"14-3-3 protein gamma"	"P61981"	0.99294433907753	0.97874105
 "UQCRQ"	"Cytochrome b-c1 complex subunit 8"	"O14949"	1.00743535415044	0.98124391
 "LMF2"	"Lipase maturation factor 2"	"Q9BU23"	1.00803427891378	0.9835974
 "WDR36"	"WD repeat-containing protein 36"	"Q8NI36"	1.00610502693483	0.97908503
 "USMG5"	"Up-regulated during skeletal muscle growth protein 5"	"Q96IX5"	0.993585173497284	0.98096019
 "FTSJ3"	"pre-rRNA processing protein FTSJ3"	"Q8IY81"	1.00690312014972	0.98262501
-"ATL2"	"Atlastin-2"	"Q8NHH9"	0.992747310353264	0.98410726
+"ATL2"	"Atlastin-2"	"Q8NHH9"	0.992747310353263	0.98410726
 "FAU"	"40S ribosomal protein S30"	"P62861"	0.994721876846514	0.97802711
 "MRPS25"	"28S ribosomal protein S25, mitochondrial"	"P82663"	1.00528693423363	0.97819066
-"CLPTM1L"	"Cleft lip and palate transmembrane protein 1-like protein"	"Q96KA5"	0.99140557306117	0.99224138
+"CLPTM1L"	"Cleft lip and palate transmembrane protein 1-like protein"	"Q96KA5"	0.991405573061169	0.99224138
 "CALR"	"Calreticulin"	"P27797"	1.00912072251177	0.99393004
 "RPS9"	"40S ribosomal protein S9"	"P46781"	1.00660039830898	0.98776436
 "CRTAP"	"Cartilage-associated protein"	"O75718"	0.994469042223984	0.99137074
@@ -2184,7 +2184,7 @@
 "CKAP5"	"Cytoskeleton-associated protein 5"	"Q14008"	2.38629018054279	0.016704628
 "EIF4G1"	"Eukaryotic translation initiation factor 4 gamma 1"	"Q04637"	2.7598272333687	0.027159661
 "RFC1"	"Replication factor C subunit 1"	"P35251"	2.7667436637164	0.028231014
-"SLC12A2"	"Solute carrier family 12 member 2"	"P55011"	2.5638326709254	0.022247424
+"SLC12A2"	"Solute carrier family 12 member 2"	"P55011"	2.56383267092541	0.022247424
 "HINT1"	"Histidine triad nucleotide-binding protein 1"	"P49773"	2.12378467736445	0.01232502
 "NSFL1C"	"NSFL1 cofactor p47"	"Q9UNZ2"	2.00785112939925	0.010525379
 "MPP6"	"MAGUK p55 subfamily member 6"	"Q9NZW5"	2.72932827305042	0.029599499
@@ -2312,7 +2312,7 @@
 "TRIM21"	"E3 ubiquitin-protein ligase TRIM21"	"P19474"	0.272417161916806	0.00028124437
 "MED29"	"Mediator of RNA polymerase II transcription subunit 29"	"Q9NX70"	0.216499799080658	0.00061084155
 "SSBP3"	"Single-stranded DNA-binding protein 3"	"Q9BWW4"	0.217232986813911	0.0006332231
-"RBMS1"	"RNA-binding motif, single-stranded-interacting protein 1"	"P29558"	0.15952269129271	0.0021367953
+"RBMS1"	"RNA-binding motif, single-stranded-interacting protein 1"	"P29558"	0.159522691292709	0.0021367953
 "MED16"	"Mediator of RNA polymerase II transcription subunit 16"	"Q9Y2X0"	0.169466847513321	0.0018444189
 "MED4"	"Mediator of RNA polymerase II transcription subunit 4"	"Q9NPJ6"	0.292861648365971	0.00030644142
 "MIOS"	"WD repeat-containing protein mio"	"Q9NXC5"	0.1953954781428	0.0011858654
@@ -2452,7 +2452,7 @@
 "GNG12"	"Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit gamma-12"	"Q9UBI6"	2.78713433031008	0.10884848
 "EPB41"	"Protein 4.1"	"P11171"	2.63856756339356	0.10484515
 "NR4A1"	"Nuclear receptor subfamily 4 group A member 1"	"P22736"	2.63907321921088	0.11068185
-"NELFB"	"Negative elongation factor B"	"Q8WX92"	2.5490836922876	0.09966445
+"NELFB"	"Negative elongation factor B"	"Q8WX92"	2.54908369228761	0.09966445
 "HELLS"	"Lymphoid-specific helicase"	"Q9NRZ9"	2.25573797002537	0.066518024
 "SLC4A2"	"Anion exchange protein 2"	"P04920"	2.13667564941035	0.057384867
 "PLAUR"	"Urokinase plasminogen activator surface receptor"	"Q03405"	2.15072961494919	0.059104834
@@ -2479,7 +2479,7 @@
 "SAR1B;SAR1A"	"GTP-binding protein SAR1b;GTP-binding protein SAR1a"	"Q9Y6B6;Q9NR31"	2.11113446644833	0.23834538
 "STK26"	"Serine/threonine-protein kinase 26"	"Q9P289"	2.1092516067871	0.25923854
 "H3F3A"	"Histone H3.3"	"P84243"	2.09180944856725	0.28336781
-"AKAP2"	"A-kinase anchor protein 2"	"Q9Y2D5"	1.7775115743277	0.00016929481
+"AKAP2"	"A-kinase anchor protein 2"	"Q9Y2D5"	1.77751157432771	0.00016929481
 "PRKACA;PRKACB"	"cAMP-dependent protein kinase catalytic subunit alpha"	"P17612"	1.92292287788564	0.0010145647
 "ATP2B4"	"Plasma membrane calcium-transporting ATPase 4"	"P23634"	1.85790793008678	0.0016032682
 "UBQLN4;UBQLN1"	"Ubiquilin-4;Ubiquilin-1"	"Q9NRR5;Q9UMX0"	0.170626698627705	0.094580442
@@ -2524,7 +2524,7 @@
 "PHLDB2"	"Pleckstrin homology-like domain family B member 2"	"Q86SQ0"	1.59157225758486	0.018535016
 "CPNE3"	"Copine-3"	"O75131"	0.375249656226325	0.10592698
 "PRKAA1"	"5-AMP-activated protein kinase catalytic subunit alpha-1"	"P54646"	1.89876975218575	0.035300188
-"RUNX3"	"Runt-related transcription factor 3"	"Q13761"	0.47264430952798	0.051510431
+"RUNX3"	"Runt-related transcription factor 3"	"Q13761"	0.472644309527979	0.051510431
 "WAPAL"	"Wings apart-like protein homolog"	"Q7Z5K2"	1.78923541172883	0.030562367
 "SART1"	"U4/U6.U5 tri-snRNP-associated protein 1"	"O43290"	0.509988923758444	0.042238303
 "PCDH7"	"Protocadherin-7"	"O60245"	1.8126296366405	0.034103841
@@ -2705,7 +2705,7 @@
 "CDC42EP1"	"Cdc42 effector protein 1"	"Q00587"	1.80419958045187	0.23884572
 "SON"	"Protein SON"	"P18583"	1.41210094895944	0.10606534
 "CDC42EP3"	"Cdc42 effector protein 3"	"Q9UKI2"	1.84645568683154	0.26094785
-"STX8"	"Syntaxin-8"	"Q9UNK0"	1.5556867673924	0.14865738
+"STX8"	"Syntaxin-8"	"Q9UNK0"	1.55568676739241	0.14865738
 "BMP2K"	"BMP-2-inducible protein kinase"	"Q9NSY1"	1.30974600765227	0.084291823
 "PICALM"	"Phosphatidylinositol-binding clathrin assembly protein"	"Q13492"	1.8635290932672	0.27481905
 "PSMD13"	"26S proteasome non-ATPase regulatory subunit 13"	"Q9UNM6"	1.60524667767042	0.17078374
@@ -2925,14 +2925,14 @@
 "NLRP10"	"NACHT, LRR and PYD domains-containing protein 10"	"Q86W26"	0.708881601477604	0.35870036
 "ETV6"	"Transcription factor ETV6"	"P41212"	0.791451902036164	0.25029427
 "CWC22"	"Pre-mRNA-splicing factor CWC22 homolog"	"Q9HCG8"	1.41359159192978	0.36854562
-"MAP7D3"	"MAP7 domain-containing protein 3"	"Q8IWC1"	1.2375257538543	0.23691984
+"MAP7D3"	"MAP7 domain-containing protein 3"	"Q8IWC1"	1.23752575385429	0.23691984
 "GLI2"	"Zinc finger protein GLI2"	"P10070"	1.26121499615571	0.25843197
 "PPP2R5C"	"Serine/threonine-protein phosphatase 2A 56 kDa regulatory subunit gamma isoform"	"Q13362"	1.28957040505013	0.27860767
 "KIF1A"	"Kinesin-like protein KIF1A"	"Q12756"	1.31036790214647	0.29475343
 "AGT"	"Angiotensinogen"	"P01019"	1.32469707401775	0.30657575
 "NAGA"	"Alpha-N-acetylgalactosaminidase"	"P17050"	0.734372199893178	0.33770445
 "PAFAH1B3"	"Platelet-activating factor acetylhydrolase IB subunit gamma"	"Q15102"	1.29058102148786	0.28340229
-"C4B"	"Complement C4-B"	"P0C0L5"	1.3162032608846	0.30387121
+"C4B"	"Complement C4-B"	"P0C0L5"	1.31620326088461	0.30387121
 "ZFP91"	"E3 ubiquitin-protein ligase ZFP91"	"Q96JP5"	1.43355257573837	0.40458024
 "ZNF598"	"Zinc finger protein 598"	"Q86UK7"	1.23726026511129	0.24819824
 "TBCA"	"Tubulin-specific chaperone A"	"O75347"	1.46174284914941	0.43232661
@@ -3019,12 +3019,12 @@
 "COG4"	"Conserved oligomeric Golgi complex subunit 4"	"Q9H9E3"	1.24367492197754	0.34334189
 "UBE2V1"	"Ubiquitin-conjugating enzyme E2 variant 1"	"Q13404"	0.840431840205966	0.29735485
 "LRRC41"	"Leucine-rich repeat-containing protein 41"	"Q15345"	0.772178905655827	0.39507532
-"POLR2I"	"DNA-directed RNA polymerase II subunit RPB9"	"P36954"	0.81375806170262	0.33272675
+"POLR2I"	"DNA-directed RNA polymerase II subunit RPB9"	"P36954"	0.813758061702619	0.33272675
 "PDLIM1"	"PDZ and LIM domain protein 1"	"O00151"	0.81257505221472	0.33622399
 "POGZ"	"Pogo transposable element with ZNF domain"	"Q7Z3K3"	0.858377301912528	0.280918
 "CDC42BPA"	"Serine/threonine-protein kinase MRCK alpha"	"Q5VT25"	1.28998438906989	0.39617452
 "GULP1"	"PTB domain-containing engulfment adapter protein 1"	"Q9UBP9"	1.37759687563564	0.49438387
-"IGFBP7"	"Insulin-like growth factor-binding protein 7"	"Q16270"	1.2090879718594	0.3227278
+"IGFBP7"	"Insulin-like growth factor-binding protein 7"	"Q16270"	1.20908797185939	0.3227278
 "CHMP6"	"Charged multivesicular body protein 6"	"Q96FZ7"	0.791029139529627	0.37450889
 "CAPN2"	"Calpain-2 catalytic subunit"	"P17655"	1.23686280128257	0.34906235
 "ENO3"	"Beta-enolase"	"P13929"	0.763508506715552	0.42355075
@@ -3160,10 +3160,10 @@
 "F8A1"	"Factor VIII intron 22 protein"	"P23610"	1.2400842137932	0.54282057
 "DNM1"	"Dynamin-1"	"Q05193"	1.24679476391559	0.5550729
 "STAT2"	"Signal transducer and activator of transcription 2"	"P52630"	1.20693864647359	0.49834305
-"RBM42"	"RNA-binding protein 42"	"Q9BTD8"	0.87780850066298	0.41186976
+"RBM42"	"RNA-binding protein 42"	"Q9BTD8"	0.877808500662979	0.41186976
 "DIS3"	"Exosome complex exonuclease RRP44"	"Q9Y2L1"	1.28718725522179	0.61844867
 "EPHA4"	"Ephrin type-A receptor 4"	"P54764"	1.24107189500136	0.54839414
-"AHCTF1"	"Protein ELYS"	"Q8WYP5"	1.2326948376685	0.53634608
+"AHCTF1"	"Protein ELYS"	"Q8WYP5"	1.23269483766849	0.53634608
 "SPTBN2"	"Spectrin beta chain, non-erythrocytic 2"	"O15020"	0.822457802347396	0.51834565
 "KIF4B"	"Chromosome-associated kinesin KIF4A"	"O95239"	0.814313478645035	0.5378176
 "MEAF6"	"Chromatin modification-related protein MEAF6"	"Q9HAF1"	0.848870269804269	0.47144216
@@ -3414,7 +3414,7 @@
 "RCOR3"	"REST corepressor 3"	"Q9P2K3"	0.927144248481822	0.71858561
 "FAM168B"	"Myelin-associated neurite-outgrowth inhibitor"	"A1KXE4"	1.07164935854619	0.70535529
 "ABCA6"	"ATP-binding cassette sub-family A member 6"	"Q8N139"	1.10028241120465	0.77051419
-"DCBLD2"	"Discoidin, CUB and LCCL domain-containing protein 2"	"Q96PD2"	0.911415564883372	0.76391399
+"DCBLD2"	"Discoidin, CUB and LCCL domain-containing protein 2"	"Q96PD2"	0.911415564883371	0.76391399
 "TLN2"	"Talin-2"	"Q9Y4G6"	1.05165898807078	0.66388053
 "IGLL5"	"Immunoglobulin lambda-like polypeptide 5"	"B9A064"	0.915773915743437	0.75476795
 "USP7"	"Ubiquitin carboxyl-terminal hydrolase 7"	"Q93009"	1.07700889983879	0.7219457
@@ -3465,7 +3465,7 @@
 "JAK1"	"Tyrosine-protein kinase JAK1"	"P23458"	1.10244586447365	0.87947863
 "SAMD11"	"Sterile alpha motif domain-containing protein 11"	"Q96NU1"	1.04824823582186	0.74549699
 "NT5E"	"5-nucleotidase"	"P21589"	1.07866000452193	0.82324797
-"EPS8"	"Epidermal growth factor receptor kinase substrate 8"	"Q12929"	0.94560783807908	0.77287745
+"EPS8"	"Epidermal growth factor receptor kinase substrate 8"	"Q12929"	0.945607838079081	0.77287745
 "DYNC1LI2"	"Cytoplasmic dynein 1 light intermediate chain 2"	"O43237"	1.09075997375319	0.85748792
 "EPS8L2"	"Epidermal growth factor receptor kinase substrate 8-like protein 2"	"Q9H6S3"	1.08047602810716	0.83580238
 "MED10"	"Mediator of RNA polymerase II transcription subunit 10"	"Q9BTT4"	0.942925318071541	0.7908389
@@ -3510,7 +3510,7 @@
 "DDX50"	"ATP-dependent RNA helicase DDX50"	"Q9BQ39"	1.05904487707774	0.8536337
 "PTMS"	"Parathymosin"	"P20962"	1.0482700494121	0.82576948
 "LYAR"	"Cell growth-regulating nucleolar protein"	"Q9NX58"	0.949634086580372	0.84241331
-"ARFGAP3"	"ADP-ribosylation factor GTPase-activating protein 3"	"Q9NP61"	0.958359375305654	0.82273632
+"ARFGAP3"	"ADP-ribosylation factor GTPase-activating protein 3"	"Q9NP61"	0.958359375305655	0.82273632
 "SUPT4H1"	"Transcription elongation factor SPT4"	"P63272"	0.959706271165071	0.82905388
 "SHCBP1"	"SHC SH2 domain-binding protein 1"	"Q8NEM2"	0.967056727136731	0.80892503
 "KNOP1"	"Lysine-rich nucleolar protein 1"	"Q1ED39"	0.969412521002345	0.80762345
@@ -3518,7 +3518,7 @@
 "PSEN1"	"Presenilin-1"	"P49768"	1.04726997198996	0.85643905
 "FOXP4"	"Forkhead box protein P4"	"Q8IVH2"	0.958075977282225	0.84894913
 "EIF1"	"Eukaryotic translation initiation factor 1"	"P41567"	0.950810360523862	0.87170202
-"HMGB1P1"	"Putative high mobility group protein B1-like 1"	"B2RPK0"	0.957299552642758	0.85330462
+"HMGB1P1"	"Putative high mobility group protein B1-like 1"	"B2RPK0"	0.957299552642757	0.85330462
 "DHX38"	"Pre-mRNA-splicing factor ATP-dependent RNA helicase PRP16"	"Q92620"	0.964484356381058	0.83620882
 "F3"	"Tissue factor"	"P13726"	0.963123520012255	0.84219366
 "COPS3"	"COP9 signalosome complex subunit 3"	"Q9UNS2"	0.959744891300051	0.85265702
@@ -3532,7 +3532,7 @@
 "SDC2"	"Syndecan-2"	"P34741"	0.958809140853933	0.87270439
 "RBM45"	"RNA-binding protein 45"	"Q8IUH3"	0.967752993005839	0.84708726
 "PAPOLA"	"Poly(A) polymerase alpha"	"P51003"	0.960489011265911	0.86924964
-"ORC2"	"Origin recognition complex subunit 2"	"Q13416"	0.957115418417484	0.88409656
+"ORC2"	"Origin recognition complex subunit 2"	"Q13416"	0.957115418417483	0.88409656
 "GAR1"	"H/ACA ribonucleoprotein complex subunit 1"	"Q9NY12"	1.02122541373306	0.81973976
 "PATL1"	"Protein PAT1 homolog 1"	"Q86TB9"	0.959010194302978	0.88285321
 "GPRIN1"	"G protein-regulated inducer of neurite outgrowth 1"	"Q7Z2K8"	1.03808168512679	0.87307423
@@ -3585,7 +3585,7 @@
 "NFX1"	"Transcriptional repressor NF-X1"	"Q12986"	0.982502775383814	0.91427147
 "UBE2N"	"Ubiquitin-conjugating enzyme E2 N"	"P61088"	1.02058264824654	0.92403591
 "TAMM41"	"Phosphatidate cytidylyltransferase, mitochondrial"	"Q96BW9"	0.972497951355026	0.95033598
-"POLR2J"	"DNA-directed RNA polymerase II subunit RPB11-a"	"P52435"	0.977805276138092	0.93369764
+"POLR2J"	"DNA-directed RNA polymerase II subunit RPB11-a"	"P52435"	0.977805276138093	0.93369764
 "CCNK"	"Cyclin-K"	"O75909"	0.980288987739304	0.92669314
 "MRE11A"	"Double-strand break repair protein MRE11A"	"P49959"	1.02701629074131	0.94796771
 "MORC2"	"MORC family CW-type zinc finger protein 2"	"Q9Y6X9"	1.02268156955267	0.93815452
@@ -3621,7 +3621,7 @@
 "EXOC3"	"Exocyst complex component 3"	"O60645"	0.986140956638096	0.9667846
 "TRIM33"	"E3 ubiquitin-protein ligase TRIM33"	"Q9UPN9"	0.99067750282258	0.95422792
 "NES"	"Nestin"	"P48681"	1.01334443100384	0.96809131
-"CLPB"	"Caseinolytic peptidase B protein homolog"	"Q9H078"	0.987807612225118	0.97230178
+"CLPB"	"Caseinolytic peptidase B protein homolog"	"Q9H078"	0.987807612225117	0.97230178
 "PDZD11"	"PDZ domain-containing protein 11"	"Q5EBL8"	0.991990192114505	0.95996636
 "TP53RK"	"TP53-regulating kinase"	"Q96S44"	0.989235814605266	0.97149533
 "GALNT13"	"Polypeptide N-acetylgalactosaminyltransferase 1 soluble form"	"Q8IUC8"	0.989105617887679	0.97253752
@@ -3631,7 +3631,7 @@
 "RFX5"	"DNA-binding protein RFX5"	"P48382"	1.0094924875127	0.97620952
 "HIPK2"	"Homeodomain-interacting protein kinase 2"	"Q9H2X6"	0.993855891355276	0.96790779
 "ADCY9"	"Adenylate cyclase type 9"	"O60503"	1.00831463291395	0.97487426
-"MZT2B"	"Mitotic-spindle organizing protein 2B"	"Q6NZ67"	0.992851211345974	0.97633564
+"MZT2B"	"Mitotic-spindle organizing protein 2B"	"Q6NZ67"	0.992851211345975	0.97633564
 "TMEM132A"	"Transmembrane protein 132A"	"Q24JP5"	1.0082669931349	0.98166311
 "RBM22"	"Pre-mRNA-splicing factor RBM22"	"Q9NW64"	1.00879975717263	0.98542684
 "SCAF8"	"Protein SCAF8"	"Q9UPN6"	0.993813232632544	0.97773743
