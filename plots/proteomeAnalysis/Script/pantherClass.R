@@ -216,6 +216,52 @@ process_and_make_treemap <- function(path, label = "", en = NULL) {
   return(sum_df)
 }
 
+make_a_treemap <- function(df, label = "", N = NULL) {
+  df$m <- rowSums(df[, 3:5])
+  pdf(paste0("Output/Plots/", label, "Treemap.pdf"), width = 13.5, height = 7)
+  treemap(df,
+          index = c("UCLASS_TERM", "CLASS_TERM"),
+          vSize = N,
+          type = "index",
+          fontcolor.labels = c("#000000", "#222222"),
+          fontsize.labels = c(16, 12),
+          fontface.labels = c(2, 1),
+          bg.labels = c("transparent"),
+          align.labels = list(
+            c("left", "top"),
+            c("right", "bottom")
+          ),
+          overlap.labels = 0.5,
+          title = "",
+          palette = "Set3",
+          drop.unused.levels = FALSE)
+  dev.off()
+}
+
+make_a_label_treemap <- function(df, label = "", N = NULL) {
+  df$m <- rowSums(df[, 3:5])
+  pdf(paste0("Output/Plots/", label, "Treemap.pdf"), width = 13.5, height = 7)
+  treemap(df,
+          index = c("UCLASS_TERM", "so_SHORTNAME"),
+          vSize = N,
+          type = "index",
+          fontcolor.labels = c("#000000", "#222222"),
+          fontsize.labels = c(16, 7),
+          fontface.labels = c(2, 1),
+          bg.labels = c("transparent"),
+          align.labels = list(
+            c("left", "top"),
+            c("center", "center")
+          ),
+          overlap.labels = 0.5,
+          title = "",
+          palette = "Set3",
+          drop.unused.levels = FALSE)
+  dev.off()
+}
+
+## Script ----
+
 pthOrganisms(PANTHER.db) <- "HUMAN"
 
 # harmonise the treemaps
@@ -244,28 +290,6 @@ all[is.na(all)] <- 0
 names(all) <- c("UCLASS_TERM", "CLASS_TERM",
                 "n.pe", "n.dm", "n.both", "n.combined")
 
-make_a_treemap <- function(df, label = "", N = NULL) {
-  df$m <- rowSums(df[, 3:5])
-  pdf(paste0("Output/Plots/", label, "Treemap.pdf"), width = 13.5, height = 7)
-  treemap(df,
-          index = c("UCLASS_TERM", "CLASS_TERM"),
-          vSize = N,
-          type = "index",
-          fontcolor.labels = c("#000000", "#222222"),
-          fontsize.labels = c(16, 12),
-          fontface.labels = c(2, 1),
-          bg.labels = c("transparent"),
-          align.labels = list(
-            c("left", "top"),
-            c("right", "bottom")
-          ),
-          overlap.labels = 0.5,
-          title = "",
-          palette = "Set3",
-          drop.unused.levels = FALSE)
-  dev.off()
-}
-
 make_a_treemap(all, "pe2", N = "n.pe")
 make_a_treemap(all, "dm2", N = "n.dm")
 make_a_treemap(all, "both2", N = "n.both")
@@ -279,11 +303,12 @@ combined_df <- combined_df[order(
 combined_df <- combined_df[, c("so_SHORTNAME",
                                "so_NAME", "so_PID",
                                "UCLASS_TERM", "CLASS_TERM")]
+export_df <-  combined_df
 # change names to "Gene name", "Protein Name", "UniProt ID", "Class", "Subclass"
-names(combined_df) <- c("Protein",
+names(export_df) <- c("Protein",
                         "Protein name", "Protein ID", "Class", "Subclass")
 # save this output
-write.csv(combined_df, "Output/Data/combinedpanther_sort.csv")
+write.csv(export_df, "Output/Data/combinedpanther_sort.csv")
 nrow(combined_df[combined_df$UCLASS_TERM == "Unclassified", ])
 # # output PDF after downsizing by 50%:
 # # Uncategorized category is 48.519 x 58.907 mm
@@ -291,3 +316,16 @@ nrow(combined_df[combined_df$UCLASS_TERM == "Unclassified", ])
 # (48.519 * 58.907) / 92
 # # draw a box to represent 1 protein should be one side of
 # sqrt((48.519 * 58.907) / 92 * 1)
+
+# for overlay of all protein names onto the treemap:
+# for each CLASS_TERM, make a string of all the proteins with that CLASS_TERM, make it \n separated
+combined_df <- combined_df %>%
+  dplyr::group_by(CLASS_TERM) %>%
+  dplyr::mutate(so_SHORTNAME = paste(so_SHORTNAME, collapse = "\n"),
+                so_NAME = paste(so_NAME, collapse = "\n"),
+                so_PID = paste(so_PID, collapse = "\n")) %>%
+  dplyr::distinct()
+# now merge the data frame all with the data frame combined_df using UCLASS_TERM and CLASS_TERM
+combined_df <- merge(all, combined_df, by = c("UCLASS_TERM", "CLASS_TERM"))
+
+make_a_label_treemap(combined_df, "combined3", N = "n.combined")
