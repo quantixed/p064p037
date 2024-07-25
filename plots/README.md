@@ -7,7 +7,8 @@
 - Combining data for analysis `DM103104/Script/upsetR.R`
 - PANTHER/GO classification, TM analysis `proteomeAnalysis`
 - TPD54 relocalization, ATG9A co-relocalization `MF053`
-- ATG9A reclocalization, TPD54 co-relocalization `MF046`
+- ATG9A relocalization, TPD54 co-relocalization `MF046`
+- ATG9 cargo co-relocalization `SJR234`
 
 ### Supplementary Figures
 
