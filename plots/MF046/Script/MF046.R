@@ -34,16 +34,17 @@ remove_imagej_rows_if_there <- function(df) {
   if (testIf[1] == "X") {
     df$X <- NULL
   }
-  
+
   return(df)
 }
 
 getRatio <- function(df, s, label) {
   subdf <- df[df$id == s & df$Channel == label, ]
   ratio <- subdf$Mean.BG[
-    grep("^post", subdf$Condition)[1]] /
+    grep("^post", subdf$Condition)[1]
+  ] /
     subdf$Mean.BG[grep("^pre", subdf$Condition)[1]]
-  
+
   return(ratio)
 }
 
@@ -59,17 +60,17 @@ calculate_ratios <- function(df, uid) {
   for (i in seq_along(uid)) {
     newdf$rTPD54[i] <- getRatio(df, uid[i], "TPD54")
     newdf$rATG9[i] <- getRatio(df, uid[i], "ATG9")
-    
+
     newdf$condA[i] <- unlist(strsplit(uid[i], "_"))[2]
     newdf$condB[i] <- unlist(strsplit(uid[i], "_"))[3]
     newdf$expt[i] <- unlist(strsplit(uid[i], "_"))[1]
   }
-  
+
   newdf$condA <- as.factor(newdf$condA)
   newdf$condA <- factor(newdf$condA, levels = c("WT", "Mut", "Cl35"))
   newdf$condB <- as.factor(newdf$condB)
   newdf$expt <- as.factor(newdf$expt)
-  
+
   return(newdf)
 }
 
@@ -84,17 +85,17 @@ calculate_loss_ratios <- function(df) {
   for (i in seq_along(uid)) {
     newdf$rTPD54[i] <- getRatio(df, uid[i], "TPD54")
     newdf$rATG9[i] <- getRatio(df, uid[i], "ATG9")
-    
+
     newdf$condA[i] <- unlist(strsplit(uid[i], "_"))[2]
     newdf$condB[i] <- unlist(strsplit(uid[i], "_"))[3]
     newdf$expt[i] <- unlist(strsplit(uid[i], "_"))[1]
   }
-  
+
   newdf$condA <- as.factor(newdf$condA)
   newdf$condA <- factor(newdf$condA, levels = c("WT", "Mut", "Cl35"))
   newdf$condB <- as.factor(newdf$condB)
   newdf$expt <- as.factor(newdf$expt)
-  
+
   return(newdf)
 }
 
@@ -157,13 +158,19 @@ cytoloss$ratio <- cytoloss$postRapalog / cytoloss$preRapalog
 cytoloss$CondA <- factor(cytoloss$CondA, levels = c("WT", "Mut", "Cl35"))
 
 mitocytocomp <- data %>%
-  pivot_wider(values_from = "Mean.BG", id_cols = c("id", "Condition", "PrePost", "CondA", "CondB", "expt"), names_from = c("Channel", "Slice"))
-mitocytocomp$TPD54 <- mitocytocomp$TPD54_0 / (mitocytocomp$TPD54_0 + mitocytocomp$TPD54_1)
-mitocytocomp$ATG9 <- mitocytocomp$ATG9_0 / (mitocytocomp$ATG9_0 + mitocytocomp$ATG9_1)
+  pivot_wider(values_from = "Mean.BG",
+              id_cols = c("id", "Condition", "PrePost",
+                          "CondA", "CondB", "expt"),
+              names_from = c("Channel", "Slice"))
+mitocytocomp$TPD54 <- mitocytocomp$TPD54_0 /
+  (mitocytocomp$TPD54_0 + mitocytocomp$TPD54_1)
+mitocytocomp$ATG9 <- mitocytocomp$ATG9_0 /
+  (mitocytocomp$ATG9_0 + mitocytocomp$ATG9_1)
 mitocytocomp <- mitocytocomp %>%
   filter(ATG9 > 0.5) %>%
   select(-c(TPD54_0, TPD54_1, ATG9_0, ATG9_1)) %>%
-  pivot_longer(cols = c("TPD54", "ATG9"), names_to = "Channel", values_to = "mmc")
+  pivot_longer(cols = c("TPD54", "ATG9"),
+               names_to = "Channel", values_to = "mmc")
 
 sp_mmc <- mitocytocomp %>%
   group_by(CondA, PrePost, Channel, expt) %>%
@@ -179,64 +186,14 @@ sp_mmc <- mitocytocomp %>%
 ## colours: WT, Mut, Cl35 = "#117733", "#999933", "#44aa99"
 ## colours: Cont, WT, Mut = "#88ccee", "#117733", "#999933"
 ## colours: superplot:" #4477aa", "#ccbb44", "#ee6677"
-## This next part will now generate the exact same plots as using mitoAnalysis.R
-### and the data from the original ImageJ script
-
-p1 <- ggplot(mito_summary_df, aes(x = condA:condB, y = rTPD54)) +
-  geom_hline(yintercept = 1, linetype = "dashed", col = "grey") +
-  geom_sina(aes(colour = condA, shape = condB)) +
-  scale_colour_manual(values = c("#117733", "#999933", "#44aa99")) +
-  scale_shape_manual(values = c(1, 16)) +
-  stat_summary(geom = "point", fun = "mean", col = "black", size = 2) +
-  ylim(c(0, NA)) +
-  labs(x = "", y = "TPD54 (Post/Pre)") +
-  theme_bw(10) +
-  theme(legend.position = "none")
-
-p2 <- ggplot(mito_summary_df, aes(x = condA:condB, y = rATG9)) +
-  geom_hline(yintercept = 1, linetype = "dashed", col = "grey") +
-  geom_sina(aes(colour = condA, shape = condB)) +
-  scale_colour_manual(values = c("#117733", "#999933", "#44aa99")) +
-  scale_shape_manual(values = c(1, 16)) +
-  stat_summary(geom = "point", fun = "mean", col = "black", size = 2) +
-  ylim(c(0, NA)) +
-  labs(x = "", y = "mCherry (Post/Pre)") +
-  theme_bw(10) +
-  theme(legend.position = "none")
-
-p3 <- ggplot(mito_summary_df, aes(x = rATG9, y = rTPD54)) +
-  geom_hline(yintercept = 1, linetype = "dashed", col = "grey") +
-  geom_vline(xintercept = 1, linetype = "dashed", col = "grey") +
-  geom_point(aes(colour = condA, shape = condB), alpha = 0.5) +
-  geom_smooth(method = lm,
-              se = FALSE, linetype = "dashed",
-              alpha = 0.75, aes(colour = condA)) +
-  facet_wrap(. ~ condB, labeller = as_labeller(condition_names)) +
-  scale_colour_manual(values = c("#117733", "#999933", "#44aa99")) +
-  scale_shape_manual(values = c(1, 16)) +
-  labs(x = "mCherry (Post/Pre)", y = "TPD54 (Post/Pre)") +
-  lims(x = c(0.5, 3), y = c(0.5, 2.5)) +
-  theme_bw(10) +
-  coord_fixed() +
-  theme(legend.position = "none")
-
-p1 <- meaningfully_x_label(p1)
-p2 <- meaningfully_x_label(p2)
-
-ggsave("Output/Plots/tpd54_ratio.png", p1,
-       width = 7, height = 4, units = "in", dpi = 300)
-ggsave("Output/Plots/atg9_ratio.png", p2,
-       width = 7, height = 4, units = "in", dpi = 300)
-ggsave("Output/Plots/tpd54vatg9_ratio.png", p3,
-       width = 8, height = 4, units = "in", dpi = 300)
 
 # Now make super plot versions
 # create the mean of ratios per experiment by grouping variables
 sp_df <- group_by(mito_summary_df, condA, condB, expt)
 sp_summary <- summarise(sp_df,
-                        n = n(),
-                        rTPD54 = mean(rTPD54),
-                        rATG9 = mean(rATG9)
+  n = n(),
+  rTPD54 = mean(rTPD54),
+  rATG9 = mean(rATG9)
 )
 
 # superplot
@@ -292,10 +249,10 @@ p4 <- meaningfully_x_label(p4)
 p5 <- meaningfully_x_label(p5)
 
 ggsave("Output/Plots/tpd54_ratio_sp.pdf", p4,
-       width = 86, height = 90, units = "mm"
+  width = 86, height = 90, units = "mm"
 )
 ggsave("Output/Plots/atg9_ratio_sp.pdf", p5,
-       width = 86, height = 90, units = "mm"
+  width = 86, height = 90, units = "mm"
 )
 
 
@@ -305,3 +262,65 @@ ggsave("Output/Plots/atg9_ratio_sp.pdf", p5,
 TPD54_model <- aov(rTPD54 ~ condA * condB, data = sp_summary)
 summary(TPD54_model)
 TukeyHSD(TPD54_model, conf.level = 0.95)
+
+
+## Cytoloss ----
+# we have a dataframe called cytoloss
+# convert to percentage loss (post vs pre) - calculated in same way as MF053
+cytoloss$ratio <- -(1 - cytoloss$ratio) * 100
+# change the name of ratio to cytoloss
+colnames(cytoloss)[colnames(cytoloss) == "ratio"] <- "cytoloss"
+# filter for Cl35 and test - this is what we will plot
+Cl35_cytoloss <- cytoloss %>%
+  filter(CondA == "Cl35", CondB == "test") %>%
+  select(CondA, expt, Channel, cytoloss)
+
+# now load the cytoloss data from MF053 (placed in Data)
+MF053_cytoloss <- read.csv("Data/MF053_cytoloss.csv")
+# filter for WT and select the columns we need
+MF053_cytoloss <- MF053_cytoloss %>%
+  filter(CondA == "WT") %>%
+  select(CondA, expt, ATG9_cytoloss, TPD54_cytoloss)
+# pivot longer to give cytoloss column, take the suffix off the column names
+MF053_cytoloss <- MF053_cytoloss %>%
+  pivot_longer(-c(CondA, expt), names_to = "Channel", values_to = "cytoloss")
+MF053_cytoloss$Channel <- gsub("_cytoloss", "", MF053_cytoloss$Channel)
+# bind the two dataframes together
+cytoloss_df <- bind_rows(Cl35_cytoloss, MF053_cytoloss)
+# combine the CondA and Channel columns
+cytoloss_df$comb <- paste(cytoloss_df$CondA, cytoloss_df$Channel, sep = ":")
+# levels are WT:TPD54, WT:ATG9, Cl35:ATG9, Cl35:TPD54
+cytoloss_df$comb <- factor(cytoloss_df$comb,
+                           levels = c("WT:TPD54", "WT:ATG9",
+                                      "Cl35:ATG9", "Cl35:TPD54"))
+# summarise mean and sd
+cytoloss_df_summary <- cytoloss_df %>%
+  group_by(comb) %>%
+  summarise(mean = mean(cytoloss), sd = sd(cytoloss))
+
+p6 <- ggplot(cytoloss_df, aes(x = comb)) +
+  geom_hline(yintercept = 0, linetype = "dashed", col = "grey") +
+  geom_linerange(aes(ymin = 0, ymax = cytoloss),
+                 colour = "darkgray",
+                 position = position_dodge2(width = 0.45)) +
+  geom_point(aes(x = comb, y = cytoloss, colour = expt), size = 2,
+             position = position_dodge2(width = 0.45)) +
+  stat_summary(aes(y = cytoloss),
+    fun = mean, fun.min = mean, fun.max = mean,
+    geom = "crossbar", width = 0.25, color = "black"
+  ) +
+  scale_color_manual(values = rep(c("#4477aa", "#ccbb44", "#ee6677"), 2)) +
+  ylim(c(-80, 10)) +
+  labs(x = "", y = "Cytoplasmic loss (%)") +
+  theme_bw(9) +
+  theme(legend.position = "none") +
+  scale_x_discrete(labels = c(
+    "WT:TPD54" = "GFP-FKBP-\nTPD54",
+    "WT:ATG9" = "ATG9A-\nA647",
+    "Cl35:ATG9" = "ATG9A-FKBP-\nmCherry",
+    "Cl35:TPD54" = "GFP-TPD54\nKnock-in"
+  ))
+
+ggsave("Output/Plots/cytoloss.pdf", p6,
+  width = 65, height = 60, units = "mm"
+)
