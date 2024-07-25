@@ -8,6 +8,10 @@
 - PANTHER/GO classification, TM analysis `proteomeAnalysis`
 - TPD54 relocalization, ATG9A co-relocalization `MF053`
 - ATG9A relocalization, TPD54 co-relocalization `MF046`
+- Kinetics: ATG9A relocalization, TPD54 co-relocalization `MF041043`
+	- Process data with `MF041043/Script/MF041043.R`
+	- Load output into Igor with `MF041043/Script/MF041043.ipf`
+	- Fit outputs from Igor are in `MF041043/Output/Data`
 - ATG9 cargo co-relocalization `SJR234`
 
 ### Supplementary Figures
