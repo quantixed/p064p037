@@ -136,15 +136,6 @@ data_wide_1 <- data_wide_1 %>%
   pivot_longer(cols = c("ATG9", "TPD54"),
                names_to = "Channel", values_to = "Ratio")
 
-# cyto data can be used to compare post as a group with pre as a group per expt
-# cytoloss <- data %>%
-#   filter(Slice == 1) %>%
-#   group_by(Channel,expt,PrePost,CondA) %>%
-#   summarise(mean = mean(Mean.BG)) %>%
-#   pivot_wider(names_from = PrePost, values_from = mean)
-# cytoloss$ratio <- cytoloss$postRapalog / cytoloss$preRapalog
-# cytoloss$CondA <- factor(cytoloss$CondA, levels = c("Cont", "WT", "Mut"))
-
 ###########################################
 ## generate plots
 ## colour/shape scheme is
@@ -152,148 +143,6 @@ data_wide_1 <- data_wide_1 %>%
 ## colours: WT, Mut, Cl35 = #117733", "#999933", "#44aa99"
 ## colours: Cont, WT, Mut = #88ccee", "#11773", "#999933"
 ## colours: superplot: #4477aa", "#ccbb44", "#ee6677"
-
-p1 <- ggplot(data, aes(
-  x = factor(CondA, levels = c("Cont", "WT", "Mut")),
-  y = Mean.BG,
-  shape = factor(PrePost, levels = c("preRapalog", "postRapalog")),
-  colour = factor(CondA, levels = c("Cont", "WT", "Mut"))
-)) +
-  geom_sina(alpha = 0.75) +
-  facet_wrap(Slice ~ Channel,
-             labeller = as_labeller(slice_names), scales = "free") +
-  scale_shape_manual(values = c(1, 16)) +
-  scale_color_manual(values = c("#88ccee", "#117733", "#999933")) +
-  labs(x = "", y = "Signal") +
-  theme_bw(10) +
-  theme(legend.position = "none") +
-  scale_x_discrete(labels = c(
-    "Cont" = "GFP-FKBP",
-    "WT" = "GFP-FKBP-TPD54",
-    "Mut" = "GFP-FKBP-TPD54(R159E)"
-  ))
-
-ggsave("Output/Plots/meanbg_raw.png", p1,
-       width = 8, height = 6, units = "in", dpi = 300)
-
-p2 <- ggplot(
-  data_wide_0,
-  aes(
-    x = factor(CondA, levels = c("Cont", "WT", "Mut")),
-    y = Ratio,
-    shape = factor(PrePost, levels = c("preRapalog", "postRapalog")),
-    colour = factor(CondA, levels = c("Cont", "WT", "Mut"))
-  )
-) +
-  geom_hline(yintercept = 1, linetype = "dashed", col = "grey") +
-  geom_sina(alpha = 0.75) +
-  facet_wrap(. ~ Channel, labeller = as_labeller(slice_names)) +
-  scale_shape_manual(values = c(1, 16)) +
-  scale_color_manual(values = c("#88ccee", "#117733", "#999933")) +
-  scale_y_continuous(limits = c(0.5, 64), trans = "log2") +
-  labs(x = "", y = expression(Ratio ~ (F[mito] / F[cyto]))) +
-  theme_bw(10) +
-  theme(legend.position = "none") +
-  scale_x_discrete(labels = c(
-    "Cont" = "GFP-FKBP",
-    "WT" = "GFP-FKBP-TPD54",
-    "Mut" = "GFP-FKBP-TPD54(R159E)"
-  ))
-
-ggsave("Output/Plots/mitocytoratio_0.png", p2,
-       width = 9, height = 5, units = "in", dpi = 300)
-
-p3 <- ggplot(
-  data_wide_1,
-  aes(
-    x = factor(CondA, levels = c("Cont", "WT", "Mut")),
-    y = Ratio,
-    shape = factor(PrePost, levels = c("preRapalog", "postRapalog")),
-    colour = factor(CondA, levels = c("Cont", "WT", "Mut"))
-  )
-) +
-  geom_hline(yintercept = 0.5, linetype = "dashed", col = "grey") +
-  geom_sina(alpha = 0.75) +
-  facet_wrap(. ~ Channel, labeller = as_labeller(slice_names)) +
-  scale_shape_manual(values = c(1, 16)) +
-  scale_color_manual(values = c("#88ccee", "#117733", "#999933")) +
-  lims(y = c(0, 1)) +
-  labs(x = "", y = expression(Mito ~ Fraction ~ (F[mito] / F[total]))) +
-  theme_bw(10) +
-  theme(legend.position = "none") +
-  scale_x_discrete(labels = c(
-    "Cont" = "GFP-FKBP",
-    "WT" = "GFP-FKBP-TPD54",
-    "Mut" = "GFP-FKBP-TPD54(R159E)"
-  ))
-
-ggsave("Output/Plots/mitocytoratio_1.png", p3,
-       width = 9, height = 5, units = "in", dpi = 300)
-
-p4 <- data_wide_0 %>%
-  pivot_wider(
-    names_from = "Channel",
-    values_from = "Ratio"
-  ) %>%
-  ggplot(aes(
-    x = TPD54,
-    y = ATG9,
-    shape = factor(PrePost, levels = c("preRapalog", "postRapalog")),
-    colour = factor(CondA, levels = c("Cont", "WT", "Mut"))
-  )) +
-  geom_hline(yintercept = 1, linetype = "dashed", col = "grey") +
-  geom_vline(xintercept = 1, linetype = "dashed", col = "grey") +
-  geom_point(alpha = 0.5) +
-  geom_smooth(method = lm, se = FALSE, linetype = "dashed", alpha = 0.75) +
-  scale_shape_manual(values = c(1, 16)) +
-  scale_color_manual(values = c("#88ccee", "#117733", "#999933")) +
-  facet_wrap(. ~ factor(PrePost, levels = c("preRapalog", "postRapalog"),
-                        labels = c("Control", "Rapalog"))) +
-  scale_y_continuous(limits = c(0.125, 128), trans = "log2") +
-  scale_x_continuous(limits = c(0.125, 128), trans = "log2") +
-  labs(
-    x = expression(GFP ~ Ratio ~ (F[mito] / F[cyto])),
-    y = expression(ATG9A ~ Ratio ~ (F[mito] / F[cyto]))
-  ) +
-  theme_bw(10) +
-  coord_fixed() +
-  theme(legend.position = "none")
-
-ggsave("Output/Plots/mitocytoratio_scatter_0.png", p4,
-       width = 10, height = 8, units = "in", dpi = 300)
-
-p5 <- data_wide_1 %>%
-  pivot_wider(
-    names_from = "Channel",
-    values_from = "Ratio"
-  ) %>%
-  ggplot(aes(
-    x = TPD54,
-    y = ATG9,
-    shape = factor(PrePost, levels = c("preRapalog", "postRapalog")),
-    colour = factor(CondA, levels = c("Cont", "WT", "Mut"))
-  )) +
-  geom_hline(yintercept = 0.5, linetype = "dashed", col = "grey") +
-  geom_vline(xintercept = 0.5, linetype = "dashed", col = "grey") +
-  geom_point(alpha = 0.5) +
-  geom_smooth(method = lm, se = FALSE, linetype = "dashed", alpha = 0.75) +
-  scale_shape_manual(values = c(1, 16)) +
-  scale_color_manual(values = c("#88ccee", "#117733", "#999933")) +
-  facet_wrap(. ~ factor(PrePost, levels = c("preRapalog", "postRapalog"),
-                        labels = c("Control", "Rapalog"))) +
-  lims(x = c(0.4, 1), y = c(0.4, 1)) +
-  labs(
-    x = expression(GFP ~ Ratio ~ (F[mito] / F[total])),
-    y = expression(ATG9A ~ Ratio ~ (F[mito] / F[total]))
-  ) +
-  theme_bw(10) +
-  coord_fixed() +
-  theme(legend.position = "none")
-
-ggsave("Output/Plots/mitocytoratio_scatter_1.png", p5,
-       width = 10, height = 8, units = "in", dpi = 300)
-
-# Now make super plot versions
 
 # create the mean of ratios per experiment by grouping variables
 sp_summary_0 <- data_wide_0 %>%
@@ -308,178 +157,6 @@ sp_summary_1 <- data_wide_1 %>%
     n = n(),
     Ratio = mean(Ratio)
   )
-
-# superplot
-p9 <- ggplot() +
-  geom_hline(yintercept = 1, linetype = "dashed", col = "grey") +
-  geom_sina(data = data_wide_0, aes(
-    x = factor(CondA,
-               levels = c("Cont", "WT", "Mut")):
-      factor(PrePost, levels = c("preRapalog", "postRapalog")),
-    y = Ratio,
-    shape = factor(PrePost, levels = c("preRapalog", "postRapalog")),
-    colour = expt
-  ), alpha = 0.5, position = "auto") +
-  geom_point(data = sp_summary_0, aes(
-    x = factor(CondA,
-               levels = c("Cont", "WT", "Mut")):
-      factor(PrePost, levels = c("preRapalog", "postRapalog")),
-    y = Ratio,
-    fill = expt
-  ), shape = 22, size = 2, stroke = 0.5, alpha = 0.7) +
-  scale_shape_manual(values = c(1, 16)) +
-  scale_color_manual(values = c("#4477aa", "#ccbb44", "#ee6677", "#000000")) +
-  scale_fill_manual(values = c("#4477aa", "#ccbb44", "#ee6677", "#000000")) +
-  facet_wrap(. ~ Channel, labeller = as_labeller(slice_names)) +
-  scale_y_continuous(limits = c(0.5, 64), trans = "log2") +
-  labs(x = "", y = expression(Ratio ~ (F[mito] / F[cyto]))) +
-  theme_bw(9) +
-  theme(legend.position = "none") +
-  scale_x_discrete(labels = c(
-    "Cont:preRapalog" = "-\nGFP-FKBP",
-    "Cont:postRapalog" = "+\nGFP-FKBP",
-    "WT:preRapalog" = "-\nGFP-FKBP-TPD54",
-    "WT:postRapalog" = "+\nGFP-FKBP-TPD54",
-    "Mut:preRapalog" = "-\nGFP-FKBP-TPD54(R159E)",
-    "Mut:postRapalog" = "+\nGFP-FKBP-TPD54(R159E)"
-  ))
-
-ggsave("Output/Plots/mitocytoratio_sp_0.png", p9,
-       width = 10, height = 6, units = "in", dpi = 300)
-
-p10 <- ggplot() +
-  geom_hline(yintercept = 0.5, linetype = "dashed", col = "grey") +
-  geom_sina(data = data_wide_1, aes(
-    x = factor(CondA, levels = c("Cont", "WT", "Mut")):
-      factor(PrePost, levels = c("preRapalog", "postRapalog")),
-    y = Ratio,
-    shape = factor(PrePost, levels = c("preRapalog", "postRapalog")),
-    colour = expt
-  ), alpha = 0.5, position = "auto") +
-  geom_point(data = sp_summary_1, aes(
-    x = factor(CondA, levels = c("Cont", "WT", "Mut")):
-      factor(PrePost, levels = c("preRapalog", "postRapalog")),
-    y = Ratio,
-    fill = expt
-  ), shape = 22, size = 2, stroke = 0.5, alpha = 0.7) +
-  scale_shape_manual(values = c(1, 16)) +
-  scale_color_manual(values = c("#4477aa", "#ccbb44", "#ee6677", "#000000")) +
-  scale_fill_manual(values = c("#4477aa", "#ccbb44", "#ee6677", "#000000")) +
-  facet_wrap(. ~ Channel, labeller = as_labeller(slice_names)) +
-  labs(x = "", y = expression(Ratio ~ (F[mito] / F[total]))) +
-  theme_bw(9) +
-  theme(legend.position = "none") +
-  scale_x_discrete(labels = c(
-    "Cont:preRapalog" = "-\nGFP-FKBP",
-    "Cont:postRapalog" = "+\nGFP-FKBP",
-    "WT:preRapalog" = "-\nGFP-FKBP-TPD54",
-    "WT:postRapalog" = "+\nGFP-FKBP-TPD54",
-    "Mut:preRapalog" = "-\nGFP-FKBP-TPD54(R159E)",
-    "Mut:postRapalog" = "+\nGFP-FKBP-TPD54(R159E)"
-  ))
-
-ggsave("Output/Plots/mitocytoratio_sp_1.png", p10,
-       width = 10, height = 6, units = "in", dpi = 300)
-
-
-# this is to look at "raw" data - not saved
-p11 <- ggplot(data, aes(
-  x = factor(CondA, levels = c("Cont", "WT", "Mut")),
-  y = Mean.BG,
-  shape = factor(PrePost, levels = c("preRapalog", "postRapalog")),
-  colour = factor(expt)
-)) +
-  geom_sina(alpha = 0.75) +
-  facet_wrap(Slice ~ Channel, labeller = as_labeller(slice_names),
-             scales = "free") +
-  scale_shape_manual(values = c(1, 16)) +
-  labs(x = "", y = "Signal") +
-  theme_bw(10) +
-  theme(legend.position = "none") +
-  scale_x_discrete(labels = c(
-    "Cont" = "GFP-FKBP",
-    "WT" = "GFP-FKBP-TPD54",
-    "Mut" = "GFP-FKBP-TPD54(R159E)"
-  ))
-
-cytoloss <- sp_summary_1 %>%
-  select(-n) %>%
-  pivot_wider(
-    names_from = c("Channel", "PrePost"),
-    values_from = "Ratio"
-  )
-cytoloss$ATG9_cytoloss <- ((1 - cytoloss$ATG9_postRapalog) -
-                             (1 - cytoloss$ATG9_preRapalog)) /
-  (1 - cytoloss$ATG9_preRapalog) * 100
-cytoloss$TPD54_cytoloss <- ((1 - cytoloss$TPD54_postRapalog) -
-                              (1 - cytoloss$TPD54_preRapalog)) /
-  (1 - cytoloss$TPD54_preRapalog) * 100
-
-p11 <- cytoloss %>%
-  pivot_longer(cols = c("ATG9_cytoloss", "TPD54_cytoloss"),
-               names_to = "Channel", values_to = "Loss") %>%
-  ggplot() +
-  geom_sina(aes(x = CondA, y = Loss, colour = expt), size = 3.5, alpha = 0.9) +
-  scale_color_manual(values = c("#4477aa", "#ccbb44", "#ee6677", "#000000")) +
-  facet_wrap(. ~ Channel) +
-  labs(x = "", y = "Cytoplasmic Loss (%)") +
-  theme_bw(10) +
-  theme(legend.position = "none") +
-  scale_x_discrete(labels = c(
-    "Cont" = "GFP-FKBP",
-    "WT" = "GFP-FKBP-TPD54",
-    "Mut" = "GFP-FKBP-TPD54(R159E)"
-  ))
-
-ggsave("Output/Plots/cytoloss.png", p11,
-       width = 8, height = 2.2, units = "in", dpi = 300)
-
-ggplot() +
-  geom_hline(yintercept = 0.5, linetype = "dashed", col = "grey") +
-  geom_sina(data = data_wide_1 %>% filter(Channel == "ATG9"), aes(
-    x = factor(CondA, levels = c("Cont", "WT", "Mut")):
-      factor(PrePost, levels = c("preRapalog", "postRapalog")),
-    y = Ratio,
-    shape = factor(PrePost, levels = c("preRapalog", "postRapalog")),
-    colour = expt
-  ), alpha = 0.5, position = "auto") +
-  geom_point(data = sp_summary_1 %>% filter(Channel == "ATG9"), aes(
-    x = factor(CondA, levels = c("Cont", "WT", "Mut")):
-      factor(PrePost, levels = c("preRapalog", "postRapalog")),
-    y = Ratio,
-    fill = expt
-  ), shape = 22, size = 2, stroke = 0.5, alpha = 0.7) +
-  scale_shape_manual(values = c(1, 16)) +
-  scale_color_manual(values = c("#4477aa", "#ccbb44", "#ee6677", "#000000")) +
-  scale_fill_manual(values = c("#4477aa", "#ccbb44", "#ee6677", "#000000")) +
-  labs(x = "", y = expression(Ratio ~ (F[mito] / F[total]))) +
-  theme_bw(11) +
-  theme(legend.position = "none") +
-  scale_x_discrete(labels = c(
-    "Cont:preRapalog" = "-\nGFP-FKBP",
-    "Cont:postRapalog" = "+\nGFP-FKBP",
-    "WT:preRapalog" = "-\nGFP-FKBP-TPD54",
-    "WT:postRapalog" = "+\nGFP-FKBP-TPD54",
-    "Mut:preRapalog" = "-\nGFP-FKBP-TPD54(R159E)",
-    "Mut:postRapalog" = "+\nGFP-FKBP-TPD54(R159E)"
-  ))
-ggsave("Output/Plots/mitocytoratio_sp_2.png", width = 12,
-       height = 6, units = "in", dpi = 300)
-
-#
-# Stats
-stat_summary <- sp_summary_0 %>%
-  pivot_wider(names_from = Channel, values_from = Ratio)
-
-TPD54_model <- aov(TPD54 ~ CondA * PrePost, data = stat_summary)
-summary(TPD54_model)
-TukeyHSD(TPD54_model, conf.level = 0.95)
-
-ATG9_model <- aov(ATG9 ~ CondA * PrePost, data = stat_summary)
-summary(ATG9_model)
-TukeyHSD(ATG9_model, conf.level = 0.95)
-
-## Figure ----
 
 p12 <- ggplot() +
   geom_hline(yintercept = 0.5, linetype = "dashed", col = "grey") +
@@ -530,3 +207,34 @@ p12 <- ggplot() +
 
 ggsave("Output/Plots/mitototalratio_sp.pdf", p12,
        width = 6.5, height = 10.5, units = "cm")
+
+# cytoloss data
+
+cytoloss <- sp_summary_1 %>%
+  select(-n) %>%
+  pivot_wider(
+    names_from = c("Channel", "PrePost"),
+    values_from = "Ratio"
+  )
+cytoloss$ATG9_cytoloss <- ((1 - cytoloss$ATG9_postRapalog) -
+                             (1 - cytoloss$ATG9_preRapalog)) /
+  (1 - cytoloss$ATG9_preRapalog) * 100
+cytoloss$TPD54_cytoloss <- ((1 - cytoloss$TPD54_postRapalog) -
+                              (1 - cytoloss$TPD54_preRapalog)) /
+  (1 - cytoloss$TPD54_preRapalog) * 100
+
+# save cytoloss data
+write.csv(cytoloss, "Output/Data/MF053_cytoloss.csv")
+
+#
+# Stats
+stat_summary <- sp_summary_0 %>%
+  pivot_wider(names_from = Channel, values_from = Ratio)
+
+TPD54_model <- aov(TPD54 ~ CondA * PrePost, data = stat_summary)
+summary(TPD54_model)
+TukeyHSD(TPD54_model, conf.level = 0.95)
+
+ATG9_model <- aov(ATG9 ~ CondA * PrePost, data = stat_summary)
+summary(ATG9_model)
+TukeyHSD(ATG9_model, conf.level = 0.95)
