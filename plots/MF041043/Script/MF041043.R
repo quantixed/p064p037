@@ -44,7 +44,7 @@ process_time <- function() {
       # we want to keep every 4th row and put into data frame
       df_temp <- data.frame(tt = times[seq(1, length(times), 4)])
       # we need to create a column that shows the Frame numbers
-      df_temp$Frame <- 1:seq_len(nrow(df_temp))
+      df_temp$Frame <- seq_len(nrow(df_temp))
       fname <- tools::file_path_sans_ext(basename(filename))
       # edit filename to match the image file that was analysed
       fname <- gsub("_deltaT", "-Registered", fname)
