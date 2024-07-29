@@ -11,18 +11,18 @@ library(tidyr)
 ## Static variables ----
 # these are the conditions that we want to compare
 condition_b_names <- c(
-  "atg9" = "ATG9A",
   "emptyv" = "mCherry",
+  "atg9" = "ATG9A",
   "tpdwt" = "WT",
   "tpdmut" = "R159E"
 )
 
 condition_a_names <- c(
-  "bif1" = "BIF1",
+  "bif1" = "SH3GLB1",
   "arfip2" = "ARFIP2",
   "daglb" = "DAGLB",
-  "pi4k2a" = "PI4K2a",
-  "pi4k3b" = "PI4K3b"
+  "pi4k2a" = "PI4K2A",
+  "pi4k3b" = "PI4KB"
 )
 
 
@@ -76,6 +76,16 @@ meaningfully_x_label <- function(p) {
 
   p <- p + scale_x_discrete(labels = named_vector)
   return(p)
+}
+
+print_stats <- function(df, comb1, comb2) {
+  query <- paste0(comb1, "-", comb2)
+  pval <- stats[query, "p adj"]
+  if (is.na(pval)) {
+    query <- paste0(comb2, "-", comb1)
+    pval <- stats[query, "p adj"]
+  }
+  return(pval)
 }
 
 ## Script ----
@@ -192,7 +202,7 @@ p11 <- ggplot() +
   theme(legend.position = "none")
 
 ggsave("Output/Plots/cargo_mitoratio_sp.pdf", p11,
-       width = 86, height = 170, units = "mm")
+       width = 51, height = 151, units = "mm")
 
 
 # Stats ----
@@ -205,4 +215,17 @@ TukeyHSD(fkbp_model, conf.level = 0.95)
 
 cargo_model <- aov(rATG9Cargo ~ condA * condB, data = sp_mito_summary)
 summary(cargo_model)
-TukeyHSD(cargo_model, conf.level = 0.95)
+stats <- TukeyHSD(cargo_model, conf.level = 0.95)
+stats <- as.data.frame(stats$`condA:condB`)
+# print the p adj values of interest
+print_stats(stats, "SH3GLB1:mCherry", "SH3GLB1:ATG9A")
+print_stats(stats, "ARFIP2:mCherry", "ARFIP2:ATG9A")
+print_stats(stats, "DAGLB:mCherry", "DAGLB:ATG9A")
+print_stats(stats, "PI4K2A:mCherry", "PI4K2A:ATG9A")
+print_stats(stats, "PI4KB:mCherry", "PI4KB:ATG9A")
+print_stats(stats, "SH3GLB1:R159E", "SH3GLB1:WT")
+print_stats(stats, "ARFIP2:R159E", "ARFIP2:WT")
+print_stats(stats, "DAGLB:R159E", "DAGLB:WT")
+print_stats(stats, "PI4K2A:R159E", "PI4K2A:WT")
+print_stats(stats, "PI4KB:R159E", "PI4KB:WT")
+
