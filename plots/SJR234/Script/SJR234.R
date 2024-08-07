@@ -2,6 +2,7 @@ library(ggplot2)
 library(ggforce)
 library(dplyr)
 library(tidyr)
+library(cowplot)
 
 # function to load in the data into a big data frame
 # uses column names as defined by Mary in her analysis script.
@@ -198,7 +199,7 @@ p11 <- ggplot() +
   scale_y_continuous(limits = c(0, NA)) +
   labs(x = "", y = expression(Mitochondrial ~ GFP ~ (F[post] / F[pre]))) +
   facet_wrap(. ~ condA, ncol = 1) +
-  theme_bw(9) +
+  theme_cowplot(9) +
   theme(legend.position = "none")
 
 ggsave("Output/Plots/cargo_mitoratio_sp.pdf", p11,

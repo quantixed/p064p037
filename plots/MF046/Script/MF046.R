@@ -2,6 +2,7 @@ library(ggplot2)
 library(ggforce)
 library(dplyr)
 library(tidyr)
+library(cowplot)
 
 # function to load in the data into a big data frame
 # relies on files being called `allResults_MF046.csv` etc
@@ -217,7 +218,7 @@ p4 <- ggplot() +
     minor_breaks = c(0.5, 1.5), limits = c(0, NA)
   ) +
   labs(x = "", y = expression(Mito ~ TPD54 ~ (F[post] / F[pre]))) +
-  theme_bw(9) +
+  theme_cowplot(9) +
   theme(
     legend.position = "none",
     axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)
@@ -239,7 +240,7 @@ p5 <- ggplot() +
   scale_fill_manual(values = c("#4477aa", "#ccbb44", "#ee6677", "#000000")) +
   ylim(c(0, NA)) +
   labs(x = "", y = expression(Mito ~ mCherry ~ (F[post] / F[pre]))) +
-  theme_bw(9) +
+  theme_cowplot(9) +
   theme(
     legend.position = "none",
     axis.text.x = element_text(angle = 90, vjust = 0.5, hjust = 1)
@@ -312,7 +313,7 @@ p6 <- ggplot(cytoloss_df, aes(x = comb)) +
   scale_color_manual(values = rep(c("#4477aa", "#ccbb44", "#ee6677"), 2)) +
   ylim(c(-80, 10)) +
   labs(x = "", y = "Cytoplasmic loss (%)") +
-  theme_bw(9) +
+  theme_cowplot(9) +
   theme(legend.position = "none") +
   scale_x_discrete(labels = c(
     "WT:TPD54" = "GFP-FKBP-\nTPD54",
@@ -322,5 +323,5 @@ p6 <- ggplot(cytoloss_df, aes(x = comb)) +
   ))
 
 ggsave("Output/Plots/cytoloss.pdf", p6,
-  width = 65, height = 60, units = "mm"
+  width = 65, height = 52, units = "mm"
 )

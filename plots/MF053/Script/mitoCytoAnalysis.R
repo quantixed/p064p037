@@ -3,6 +3,7 @@ library(ggforce)
 library(dplyr)
 library(tidyr)
 library(reshape2)
+library(cowplot)
 
 # function to load in the data into a big data frame
 # relies on files being called `allResults_MF046.csv` etc
@@ -194,7 +195,7 @@ p12 <- ggplot() +
              labeller = as_labeller(slice_names), nrow = 2) +
   labs(x = "", y = expression(Ratio ~ (F[mito] / F[total]))) +
   lims(y = c(0.5, 1)) +
-  theme_bw(9) +
+  theme_cowplot(9) +
   theme(legend.position = "none") +
   scale_x_discrete(labels = c(
     "Cont:preRapalog" = "-\nGFP-FKBP",
