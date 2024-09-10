@@ -25,6 +25,7 @@ Mary Fesenko, Daniel J. Moore, Peyton Ewbank & Stephen J. Royle
 	- Fit outputs from Igor are in `MF041043/Output/Data`
 - ATG9 cargo co-relocalization `SJR234`
 - LC3 quantification `MF122`
+- ATG9 Golgi quantification `MF123`
 
 ### Supplementary Figures
 
