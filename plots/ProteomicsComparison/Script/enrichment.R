@@ -1,5 +1,6 @@
 # enrichment analysis
 library(ggplot2)
+library(cowplot)
 
 ## Functions ----
 
@@ -93,24 +94,37 @@ enrichment_test(
   title = "INVs and CCV dataset"
 )
 
-# ATG9 incidence in INVs
-pie_maker(x1 = c(143, 459),
-          cols = c("#44aa99", "#117733"), label = "pie_atg9_incidence_inv")
-# ATG9 incidence in all and in INVs
-pie_maker(x1 = c(392 - 143, 143, 459, 3264 - 459),
-          cols = c("#bbbbbb", "#44aa99", "#117733", "#dddddd"),
-          x2 = c(392, 3264), label = "pie_atg9_incidence_ip")
-# SLMV incidence in INVs
-pie_maker(x1 = c(33, 569),
-          cols = c("#44aa99", "#117733"), label = "pie_SLMV_incidence_inv")
-# SLMV incidence in all and in INVs
-pie_maker(x1 = c(67 - 33, 33, 569, 3589 - 569),
-          cols = c("#bbbbbb", "#44aa99", "#117733", "#dddddd"),
-          x2 = c(67, 3589), label = "pie_SLMV_incidence_ip")
-# CCV incidence in INVs
-pie_maker(x1 = c(9, 593),
-          cols = c("#44aa99", "#117733"), label = "pie_CCV_incidence_inv")
-# CCV incidence in all and in INVs
-pie_maker(x1 = c(61 - 9, 9, 593, 3595 - 593),
-          cols = c("#bbbbbb", "#44aa99", "#117733", "#dddddd"),
-          x2 = c(61, 3595), label = "pie_CCV_incidence_ip")
+
+slmv <- data.frame(
+  n = c(33 / 602, 67 / 3656),
+  label = c("INV", "Total")
+)
+
+atg9 <- data.frame(
+  n = c(143 / 602, 392 / 3656),
+  label = c("INV", "Total")
+)
+
+ccv <- data.frame(
+  n = c(9 / 602, 61 / 3656),
+  label = c("INV", "Total")
+)
+
+# rbind these three into one data frame with a column to indicate the origin
+prots <- rbind(
+  cbind(slmv, df = "SLMV"),
+  cbind(atg9, df = "ATG9"),
+  cbind(ccv, df = "CCV")
+)
+prots$df <- factor(prots$df, levels = c("CCV", "ATG9", "SLMV"))
+prots$label <- factor(prots$label, levels = c("Total", "INV"))
+
+p1 <- ggplot(prots) +
+  geom_col(aes(y = df, x = n, fill = label), position = "dodge") +
+  scale_fill_manual(values = c("#bbbbbb","#009988")) +
+  labs(x = "Fraction", y = "") +
+  lims(x = c(0, 0.3)) +
+  theme_cowplot(9) +
+  theme(legend.position = "top")
+p1
+ggsave("Output/Plots/bars.pdf", p1, width = 79, height = 80, units = "mm")
