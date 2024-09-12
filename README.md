@@ -1,7 +1,7 @@
 # p064p037
 Code and data for Fesenko et al. manuscript `#p064p037`
 
-**Non-disruptive inducible labeling of ER-membrane contact sites using the Lamin B Receptor**
+**ATG9 vesicles are a subtype of intracellular nanovesicle**
 
 Mary Fesenko, Daniel J. Moore, Peyton Ewbank & Stephen J. Royle
 
@@ -9,7 +9,7 @@ Mary Fesenko, Daniel J. Moore, Peyton Ewbank & Stephen J. Royle
 
 --
 
-# R Code and data for recreation of plots
+# R code and data for recreation of plots
 
 ### Main Figures
 
@@ -17,8 +17,8 @@ Mary Fesenko, Daniel J. Moore, Peyton Ewbank & Stephen J. Royle
 - Volcano plot of GFP-TPD54 knock-in INVs `proteomeAnalysis/Script/volcanoPlot.R`
 - Combining data for analysis `DM103104/Script/upsetR.R`
 - PANTHER/GO classification, TM analysis `proteomeAnalysis`
-- TPD54 relocalization, ATG9A co-relocalization `MF053`
-- ATG9A relocalization, TPD54 co-relocalization `MF046`
+- TPD54 relocalization, ATG9A co-relocation `MF053`
+- ATG9A relocalization, TPD54 co-relocation `MF046`
 - Kinetics: ATG9A relocalization, TPD54 co-relocalization `MF041043`
 	- Process data with `MF041043/Script/MF041043.R`
 	- Load output into Igor with `MF041043/Script/MF041043.ipf`
@@ -31,6 +31,7 @@ Mary Fesenko, Daniel J. Moore, Peyton Ewbank & Stephen J. Royle
 
 - Comparison of WT, R159E, control `DM103104/Script/DM103104.R`
 - Comparison of INV proteome with SLMV and ATG9 proteomes, Euler plots and replot of Judith et al. data to highlight INV proteins `ProteomicsComparison`
+- ATG9A relocalization plot `MF046`
 
 ### Tables
 
