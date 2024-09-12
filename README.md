@@ -5,7 +5,7 @@ Code and data for Fesenko et al. manuscript `#p064p037`
 
 Mary Fesenko, Daniel J. Moore, Peyton Ewbank & Stephen J. Royle
 
-*bioRxiv* 2024. DOI: [https://doi.org/10.1101/xxx](https://doi.org/10.1101/xxx)
+*bioRxiv* 2024. DOI: [https://doi.org/10.1101/2024.09.12.612637](https://doi.org/10.1101/2024.09.12.612637)
 
 --
 
