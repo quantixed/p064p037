@@ -36,7 +36,7 @@ df$condB <- sapply(strsplit(df$file, "_"), "[", 2)
 df$cell <- sapply(strsplit(df$file, "_"), "[", 3)
 # remove fed+Baf as we will not plot this condition
 df <- df[df$condB != "fed+Baf", ]
-# remove puncta with less than 400 pixels
+# remove puncta with less than 200 pixels
 df <- df[df$PIXEL_COUNT > 200, ]
 # scale pixels to Volume..micron.3.
 df$Volume..micron.3. <- df$PIXEL_COUNT * 0.0392857^3
