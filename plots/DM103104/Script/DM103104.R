@@ -74,7 +74,8 @@ p1 <- ggplot(all_df, aes(x = log2(ratioWave_wt_ct), y = log2(ratioWave_wt_re),
   geom_hline(yintercept = 0, linetype = "dashed", colour = "grey") +
   geom_point(aes(colour = as.factor(encat1), size = ceiling(pcat1 / 4) / 10,
                  shape = as.factor(pcat1)), alpha = 0.75) +
-  geom_text_repel(size = 1.8, max.overlaps = 25) +
+  geom_text_repel(size = 1.5, max.overlaps = 25, segment.alpha = 0.5,
+                  segment.size = 0.2) +
   scale_shape_manual(values = c(1, 0, 5, 16)) +
   scale_color_manual(values = coolors) +
   scale_x_continuous(limits = c(-2.5, 10), breaks = seq(-2, 10, 2)) +
@@ -87,10 +88,10 @@ p1 <- ggplot(all_df, aes(x = log2(ratioWave_wt_ct), y = log2(ratioWave_wt_re),
   theme(legend.position = "none")
 
 ggsave("Output/Plots/WTvREvsWTvCT.pdf", p1,
-       width = 80, height = 80, units = "mm")
+       width = 120, height = 120, units = "mm")
 ggsave("Output/Plots/WTvREvsWTvCTKey.pdf",
        p1 + theme(legend.position = "right"),
-       width = 120, height = 120, units = "mm")
+       width = 180, height = 180, units = "mm")
 
 
 # bit0 is significant in 1st set, bit1 is significant in 2nd
@@ -112,7 +113,8 @@ p2 <- ggplot(all_df, aes(x = log2(ratioWave_wt_ct),
   geom_hline(yintercept = 0, linetype = "dashed", colour = "grey") +
   geom_point(aes(colour = as.factor(encat2), size = ceiling(pcat2 / 4) / 10,
                  shape = as.factor(pcat2)), alpha = 0.75) +
-  geom_text_repel(size = 1.8, max.overlaps = 25) +
+  geom_text_repel(size = 1.5, max.overlaps = 25, segment.alpha = 0.5,
+                  segment.size = 0.2) +
   scale_shape_manual(values = c(1, 0, 5, 16)) +
   scale_color_manual(values = coolors) +
   scale_x_continuous(limits = c(-2.5, 10), breaks = seq(-2, 10, 2)) +
@@ -125,7 +127,7 @@ p2 <- ggplot(all_df, aes(x = log2(ratioWave_wt_ct),
   theme(legend.position = "none")
 
 ggsave("Output/Plots/WTvREvsREvCT.pdf", p2,
-       width = 80, height = 80, units = "mm")
+       width = 120, height = 120, units = "mm")
 
 p3 <- ggplot(all_df, aes(x = log2(ratioWave_wt_ct),
                          y = log2(ratioWave_re_ct), label = label1)) +
@@ -133,7 +135,8 @@ p3 <- ggplot(all_df, aes(x = log2(ratioWave_wt_ct),
   geom_hline(yintercept = 0, linetype = "dashed", colour = "grey") +
   geom_point(aes(colour = as.factor(encat2), size = ceiling(pcat2 / 4) / 10,
                  shape = as.factor(pcat2)), alpha = 0.75) +
-  geom_text_repel(size = 1.8, max.overlaps = 25) +
+  geom_text_repel(size = 1.5, max.overlaps = 25, segment.alpha = 0.5,
+                  segment.size = 0.2) +
   scale_shape_manual(values = c(1, 0, 5, 16)) +
   scale_color_manual(values = coolors) +
   scale_x_continuous(limits = c(-2.5, 10), breaks = seq(-2, 10, 2)) +
@@ -146,7 +149,7 @@ p3 <- ggplot(all_df, aes(x = log2(ratioWave_wt_ct),
   theme(legend.position = "none")
 
 ggsave("Output/Plots/WTvREvsREvCTalt.pdf", p3,
-       width = 80, height = 80, units = "mm")
+       width = 120, height = 120, units = "mm")
 
 # volcano plots ----
 
