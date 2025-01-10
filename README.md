@@ -3,7 +3,7 @@ Code and data for Fesenko et al. manuscript `#p064p037`
 
 **ATG9 vesicles are a subtype of intracellular nanovesicle**
 
-Mary Fesenko, Daniel J. Moore, Peyton Ewbank & Stephen J. Royle
+Mary Fesenko, Daniel J. Moore, Peyton Ewbank, Elizabeth Courthold & Stephen J. Royle
 
 *bioRxiv* 2024. DOI: [https://doi.org/10.1101/2024.09.12.612637](https://doi.org/10.1101/2024.09.12.612637)
 
@@ -24,7 +24,8 @@ Mary Fesenko, Daniel J. Moore, Peyton Ewbank & Stephen J. Royle
 	- Load output into Igor with `MF041043/Script/MF041043.ipf`
 	- Fit outputs from Igor are in `MF041043/Output/Data`
 - ATG9 cargo co-relocalization `SJR234`
-- LC3 quantification `MF122`
+- LC3 western blot quantification `LC053`
+- LC3 immunofluorescence quantification `MF122`
 - ATG9 Golgi quantification `MF123`
 
 ### Supplementary Figures

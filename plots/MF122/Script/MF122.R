@@ -34,8 +34,6 @@ df <- do.call(rbind, lapply(filelist, function(x) {
 df$condA <- sapply(strsplit(df$file, "_"), "[", 1)
 df$condB <- sapply(strsplit(df$file, "_"), "[", 2)
 df$cell <- sapply(strsplit(df$file, "_"), "[", 3)
-# remove fed+Baf as we will not plot this condition
-df <- df[df$condB != "fed+Baf", ]
 # remove puncta with less than 200 pixels
 df <- df[df$PIXEL_COUNT > 200, ]
 # scale pixels to Volume..micron.3.
@@ -91,7 +89,7 @@ ggplot() +
   lims(y = c(0, NA)) +
   theme_cowplot(9) +
   theme(legend.position = "none")
-ggsave("Output/Plots/meanvol.pdf", width = 88, height = 50, units = "mm")
+ggsave("Output/Plots/meanvol.pdf", width = 81, height = 46, units = "mm")
 
 ggplot() +
   geom_sina(data = summary_df, aes(x = condAB, y = n,
@@ -107,8 +105,7 @@ ggplot() +
   lims(y = c(0, NA)) +
   theme_cowplot(9) +
   theme(legend.position = "none")
-ggsave("Output/Plots/n.pdf", width = 88, height = 50, units = "mm")
-
+ggsave("Output/Plots/n.pdf", width = 81, height = 46, units = "mm")
 
 ## Stats ----
 
@@ -125,13 +122,35 @@ stats_n <- as.data.frame(stats_n$`condA:condB`)
 
 # print the p adj values of interest
 print_stats(stats_vol, "siGL2:starved+DMSO", "siGL2:fed+DMSO")
-print_stats(stats_vol, "siTPD54:starved+DMSO", "siGL2:fed+DMSO")
+print_stats(stats_vol, "siTPD54:starved+DMSO", "siTPD54:fed+DMSO")
 print_stats(stats_n, "siGL2:starved+DMSO", "siGL2:starved+Baf")
 print_stats(stats_n, "siTPD54:starved+DMSO", "siTPD54:starved+Baf")
+# only interested in two comparisons
+t.test(expt_summary_df$overall_n[expt_summary_df$condAB == "Starved - BafA1\nsiCtrl"],
+       expt_summary_df$overall_n[expt_summary_df$condAB == "Starved + BafA1\nsiCtrl"])
+t.test(expt_summary_df$overall_n[expt_summary_df$condAB == "Starved - BafA1\nsiTPD54"],
+       expt_summary_df$overall_n[expt_summary_df$condAB == "Starved + BafA1\nsiTPD54"])
 
-# difference in overall_mean for each expt compare "Starved - BafA1\nsiCtrl" and  "Starved - BafA1\nsiTPD54"
+# difference in overall_mean for each expt compare "Starved - BafA1\nsiCtrl" and "Starved - BafA1\nsiTPD54"
 expt_summary_df %>%
   ungroup() %>%
   select(condAB, expt, overall_mean) %>%
   pivot_wider(names_from = condAB, values_from = overall_mean) %>%
-  mutate(diff = (`Starved - BafA1\nsiCtrl` - `Starved - BafA1\nsiTPD54`) / `Starved - BafA1\nsiCtrl` * 100)
+  mutate(diff = (`Starved - BafA1\nsiCtrl` - `Starved - BafA1\nsiTPD54`) / `Starved - BafA1\nsiCtrl` * 100) %>% 
+  select(expt, diff)
+
+# difference in overall_n for each expt compare "Starved - BafA1\nsiCtrl" and  "Starved + BafA1\nsiCtrl"
+expt_summary_df %>%
+  ungroup() %>%
+  select(condAB, expt, overall_n) %>%
+  pivot_wider(names_from = condAB, values_from = overall_n) %>%
+  mutate(diff = (`Starved + BafA1\nsiCtrl` - `Starved - BafA1\nsiCtrl`) / `Starved - BafA1\nsiCtrl` * 100) %>% 
+  select(expt, diff)
+
+# difference in overall_n for each expt compare "Starved - BafA1\nsiTPD54" and  "Starved + BafA1\nsiTPD54"
+expt_summary_df %>%
+  ungroup() %>%
+  select(condAB, expt, overall_n) %>%
+  pivot_wider(names_from = condAB, values_from = overall_n) %>%
+  mutate(diff = (`Starved + BafA1\nsiTPD54` - `Starved - BafA1\nsiTPD54`) / `Starved - BafA1\nsiTPD54` * 100) %>% 
+  select(expt, diff)
