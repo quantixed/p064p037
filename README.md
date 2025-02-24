@@ -1,7 +1,10 @@
 # p064p037
+
+[![DOI](https://zenodo.org/badge/710805399.svg)](https://doi.org/10.5281/zenodo.14916299)
+
 Code and data for Fesenko et al. manuscript `#p064p037`
 
-**ATG9 vesicles are a subtype of intracellular nanovesicle**
+**ATG9A vesicles are a subtype of intracellular nanovesicle**
 
 Mary Fesenko, Daniel J. Moore, Peyton Ewbank, Elizabeth Courthold & Stephen J. Royle
 
