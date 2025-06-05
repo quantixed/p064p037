@@ -8,7 +8,9 @@ Code and data for Fesenko et al. manuscript `#p064p037`
 
 Mary Fesenko, Daniel J. Moore, Peyton Ewbank, Elizabeth Courthold & Stephen J. Royle
 
-*bioRxiv* 2024. DOI: [https://doi.org/10.1101/2024.09.12.612637](https://doi.org/10.1101/2024.09.12.612637)
+*J Cell Sci* (2025) 138 (7): jcs263852 [https://doi.org/10.1242/jcs.263852](https://doi.org/10.1242/jcs.263852)
+
+PREPRINT: *bioRxiv* 2024. DOI: [https://doi.org/10.1101/2024.09.12.612637](https://doi.org/10.1101/2024.09.12.612637)
 
 --
 
